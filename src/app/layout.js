@@ -1,7 +1,17 @@
-import { Inter } from "next/font/google";
+import { Source_Serif_4, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-source-serif",
+});
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-source-sans",
+});
 
 export const metadata = {
   title: "Dr. Pedro Boni | Oftalmologista",
@@ -37,7 +47,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <body className={`${sourceSans.variable} ${sourceSerif.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
