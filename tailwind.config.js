@@ -16,7 +16,12 @@ module.exports = {
         title: ["var(--font-source-serif)"],
         text: ["var(--font-source-sans)"],
       },
+      colors: {
+        "boni-blue-100": "#044678",
+        "boni-blue-200": "#022b54",
+        "boni-blue-300": "#011c36",
+      },
     },
+    plugins: [],
   },
-  plugins: [],
 };
