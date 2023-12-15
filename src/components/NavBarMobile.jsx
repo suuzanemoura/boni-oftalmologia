@@ -18,7 +18,7 @@ export default function NavBarMobile({ setMobileMenuOpen }) {
         >
           <span className="sr-only">Dr. Pedro Boni</span>
           <Image
-            className="h-12 w-auto object-contain"
+            className="h-8 2xs:h-10 xs:h-12 w-auto object-contain"
             src={logo}
             alt="Logo do Dr. Pedro Boni"
             priority={true}

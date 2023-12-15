@@ -15,6 +15,13 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata = {
+  metadataBase: new URL("http://localhost:3000/"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "pt-BR": "/pt-BR",
+    },
+  },
   title: "Dr. Pedro Boni | Oftalmologista",
   description:
     "Oftalmologista, especialista em Catarata, Glaucoma e Córnea. Te ajudo a preservar a visão!",
@@ -26,7 +33,7 @@ export const metadata = {
     description:
       "Oftalmologista, especialista em Catarata, Glaucoma e Córnea. Te ajudo a preservar a visão!",
     siteName: "Dr. Pedro Boni | Oftalmologista",
-    images: "/image_drpedroboni.svg",
+    images: "/images/image_drpedroboni.jpg",
     locale: "pt_BR",
     type: "website",
   },
