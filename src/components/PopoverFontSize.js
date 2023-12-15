@@ -11,14 +11,14 @@ export default function PopoverFontSize({ position, iconSize }) {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 -960 960 960"
-          className={"w-4 h-4 sm:w-5 sm:h-5 fill-current"}
+          className={"w-4 h-4 2xs:w-5 2xs:h-5 fill-current"}
         >
           <path d="M560-160v-520H360v-120h520v120H680v520H560Zm-360 0v-320H80v-120h360v120H320v320H200Z" />
         </svg>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
-          className={"w-4 h-4 sm:w-5 sm:h-5 fill-current"}
+          className={"w-4 h-4 2xs:w-5 2xs:h-5 fill-current"}
         >
           <path d="M9 6a.75.75 0 01.75.75v1.5h1.5a.75.75 0 010 1.5h-1.5v1.5a.75.75 0 01-1.5 0v-1.5h-1.5a.75.75 0 010-1.5h1.5v-1.5A.75.75 0 019 6z" />
           <path

@@ -21,6 +21,10 @@ module.exports = {
         "boni-blue-200": "#022b54",
         "boni-blue-300": "#011c36",
       },
+      screens: {
+        xs: "480px",
+        "2xs": "360px",
+      },
     },
     plugins: [],
   },
