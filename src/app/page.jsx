@@ -11,8 +11,8 @@ export default function Home() {
     <>
       <Header />
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div className={`flex flex-col gap-6 ${textSize}`}>
-          <p>
+        <div className={`flex flex-col gap-6`}>
+          <p className={`${textSize}`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
             pretium eleifend mauris a rhoncus. Pellentesque posuere semper neque
             eu lacinia. Praesent iaculis sit amet odio quis sollicitudin. Nunc
@@ -22,7 +22,7 @@ export default function Home() {
             Quisque id dui sed dui commodo consequat non eu enim.
           </p>
 
-          <p>
+          <p className={`${textSize}`}>
             Donec ac felis finibus, hendrerit lorem ac, suscipit turpis. Sed a
             ex metus. Nam convallis imperdiet posuere. Nulla felis tellus,
             laoreet non blandit a, euismod vitae nunc. Cras porttitor lacus vel
@@ -35,7 +35,7 @@ export default function Home() {
             Duis sollicitudin non mi eu feugiat.
           </p>
 
-          <p>
+          <p className={`${textSize}`}>
             Nam eget diam eget mi mollis posuere sed eget urna. Vivamus
             facilisis metus porta, euismod mauris eget, facilisis tellus.
             Suspendisse massa ante, vehicula a justo id, tristique pellentesque
@@ -48,7 +48,7 @@ export default function Home() {
             dapibus.
           </p>
 
-          <p>
+          <p className={`${textSize}`}>
             Cras non sapien tempus, vulputate nulla ac, consequat velit. Integer
             facilisis nunc nisi, sit amet malesuada augue sagittis in. Donec
             sodales neque at sapien consequat convallis. In ante augue, tempor
@@ -62,7 +62,7 @@ export default function Home() {
             aliquet.
           </p>
 
-          <p>
+          <p className={`${textSize}`}>
             Quisque ac libero nisl. In hac habitasse platea dictumst. Etiam
             sollicitudin mollis tortor eu iaculis. Praesent lacinia rhoncus
             tincidunt. Sed id dui non justo tincidunt maximus sit amet at magna.
