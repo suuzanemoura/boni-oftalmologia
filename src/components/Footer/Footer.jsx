@@ -32,7 +32,10 @@ export default function Footer() {
             </div>
 
             <div className="flex mt-2 lg:ml-11 gap-2">
-              <Link href="https://www.instagram.com/drpedroboni/">
+              <Link
+                href="https://www.instagram.com/drpedroboni/"
+                target="_blank"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
@@ -42,7 +45,10 @@ export default function Footer() {
                 </svg>
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="https://www.youtube.com/@dr.pedroboni5584">
+              <Link
+                href="https://www.youtube.com/@dr.pedroboni5584"
+                target="_blank"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 576 512"
@@ -57,7 +63,10 @@ export default function Footer() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4">
             <div>
-              <Link href="https://www.doctoralia.com.br/pedro-boni-goncalves/oftalmologista/rio-de-janeiro?utm_campaign=129107&utm_medium=link&utm_source=widget&utm_term=instagram-profile-link">
+              <Link
+                href="https://www.doctoralia.com.br/pedro-boni-goncalves/oftalmologista/rio-de-janeiro?utm_campaign=129107&utm_medium=link&utm_source=widget&utm_term=instagram-profile-link"
+                target="_blank"
+              >
                 <Image
                   src={doctoralia}
                   alt="Imagem do perfil do Doctoralia"
@@ -72,6 +81,7 @@ export default function Footer() {
                 <Link
                   href="https://api.whatsapp.com/send/?phone=5521999132833&text=Ol%C3%A1%21+Vim+do+site+do+Dr.+Pedro+Boni+e+gostaria+de+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
                   className="hover:underline"
+                  target="_blank"
                 >
                   <li className="flex gap-1.5">
                     <DevicePhoneMobileIcon className="h-5 w-5 text-boni-blue-200" />
@@ -81,6 +91,7 @@ export default function Footer() {
                 <Link
                   href="mailto:contato@drpedroboni.com.br"
                   className="hover:underline"
+                  target="_blank"
                 >
                   <li className="flex gap-1.5">
                     <EnvelopeIcon className="h-5 w-5 text-boni-blue-200" />
@@ -89,7 +100,8 @@ export default function Footer() {
                 </Link>
                 <Link
                   href="https://maps.app.goo.gl/urKgbzaHYhnD8xUy8"
-                  className="hover:underline "
+                  className="hover:underline"
+                  target="_blank"
                 >
                   <li className="flex gap-1.5 mb-4">
                     <MapPinIcon className="h-5 w-5 text-boni-blue-200" />
