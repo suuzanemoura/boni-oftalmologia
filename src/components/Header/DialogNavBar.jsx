@@ -9,7 +9,7 @@ import {
   CursorArrowRippleIcon,
   ChevronRightIcon,
 } from "@heroicons/react/20/solid";
-import logo_azul from "../../public/images/image_logo_drpedroboni_azul.png";
+import logo_azul from "../../../public/images/image_logo_drpedroboni_azul.png";
 import "animate.css";
 
 export default function DialogNavBar({ mobileMenuOpen, setMobileMenuOpen }) {

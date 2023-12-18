@@ -1,6 +1,7 @@
 "use client";
 
-import Header from "@/components/Header";
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
 import { FontContext } from "@/contexts/FontContext";
 import { useContext } from "react";
 
@@ -72,6 +73,7 @@ export default function Home() {
           </p>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
