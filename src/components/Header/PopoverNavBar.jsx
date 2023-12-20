@@ -4,7 +4,7 @@ import PopoverFontSize from "./PopoverFontSize";
 
 export default function PopoverNavBar() {
   return (
-    <Popover.Group className="hidden lg:flex md:gap-x-4 xl:gap-x-8 xl:text-lg text-base leading-6">
+    <Popover.Group className="hidden lg:flex md:gap-x-4 xl:gap-x-8 xl:text-lg 3xl:text-2xl text-base leading-6">
       <Link
         href="/"
         className="hover:underline-offset-8 hover:underline decoration-sky-600"

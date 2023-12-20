@@ -4,7 +4,6 @@ import Link from "next/link";
 import PopoverNavBar from "./PopoverNavBar";
 import logo from "../../../public/images/image_logo_drpedroboni.png";
 
-
 export default function NavBar() {
   return (
     <nav
@@ -18,7 +17,7 @@ export default function NavBar() {
         >
           <span className="sr-only">Dr. Pedro Boni</span>
           <Image
-            className="h-12 w-auto object-contain"
+            className="h-12 w-auto object-contain 3xl:h-20"
             src={logo}
             alt="Logo do Dr. Pedro Boni"
             priority={true}
@@ -30,7 +29,7 @@ export default function NavBar() {
         <Link
           href="https://www.doctoralia.com.br/z/oMriYf"
           target="_blank"
-          className="rounded-full px-6 mx-1 py-2.5 font-bold leading-6 bg-white text-boni-blue-200 shadow-sm hover:text-boni-blue-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-boni-blue-200 uppercase flex justify-center items-center animate__animated animate__pulse animate-[1s_ease-in-out_infinite] gap-x-1.5 ml-6 lg:ml-12 xl:ml-16 md:text-sm 2xl:text-base w-fit"
+          className="rounded-full px-6 mx-1 py-2.5 font-bold leading-6 bg-white text-boni-blue-200 shadow-sm hover:text-boni-blue-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-boni-blue-200 uppercase flex justify-center items-center animate__animated animate__pulse animate-[1s_ease-in-out_infinite] gap-x-1.5 ml-6 lg:ml-12 xl:ml-16 md:text-sm 2xl:text-base w-fit 3xl:text-xl"
         >
           Agende sua consulta!
           <CursorArrowRippleIcon className="h-6 md:h-7 xl:6" />
