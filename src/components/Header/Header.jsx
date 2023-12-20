@@ -9,7 +9,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header>
+    <header className=" z-50">
       <NavBar />
       <NavBarMobile setMobileMenuOpen={setMobileMenuOpen} />
       <DialogNavBar
