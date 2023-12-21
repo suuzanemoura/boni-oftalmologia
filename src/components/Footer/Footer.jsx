@@ -74,10 +74,10 @@ export default function Footer() {
               </Link>
             </div>
             <div>
-              <h2 className="pt-3 lg:pt-4 mb-2 text-sm 2xs:text-md font-bold text-boni-blue-200 uppercase">
+              <h2 className="pt-3 lg:pt-4 mb-2 text-sm 2xs:text-md font-bold text-boni-blue-200 uppercase text-center md:text-left">
                 Onde me encontrar
               </h2>
-              <ul className="text-gray-500 text-sm lg:text-base font-medium flex flex-col gap-2">
+              <ul className="text-gray-500 text-sm lg:text-base font-medium flex flex-col gap-2 text-center md:text-left items-center md:items-start">
                 <Link
                   href="https://api.whatsapp.com/send/?phone=5521999132833&text=Ol%C3%A1%21+Vim+do+site+do+Dr.+Pedro+Boni+e+gostaria+de+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
                   className="hover:underline"
