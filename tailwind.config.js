@@ -26,6 +26,7 @@ module.exports = {
         xs: "480px",
         "2xs": "360px",
         "3xl": "1920px",
+        "4xl": "2560px",
       },
     },
     plugins: [],

@@ -2,12 +2,13 @@ import { ArrowDownCircleIcon } from "@heroicons/react/20/solid";
 import VideoPresentation from "./VideoPresentation";
 import { useContext } from "react";
 import { FontContext } from "@/contexts/FontContext";
+import Link from "next/link";
 
 export default function HeroSection({ title, highlight, description }) {
   const { textSize } = useContext(FontContext);
 
   return (
-    <section className="py-6 relative flex flex-col items-center pt-20 min-h-[36rem] 3xl:min-h-[54rem]">
+    <section className="py-6 relative flex flex-col items-center pt-20 md:min-h-[54rem] lg:min-h-[36rem] 3xl:min-h-[46rem] 4xl:min-h-[54rem]">
       <div
         className="absolute inset-x-0 -top-40 -z-50 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         aria-hidden="true"
@@ -21,26 +22,34 @@ export default function HeroSection({ title, highlight, description }) {
         />
       </div>
       <div className="absolute top-0 left-0 overflow-hidden leading-[0] w-full pb-24">
-        <div className="grid items-center gap-12 lg:grid-cols-2 px-6 pt-16 md:px-44 pb-20 text-center lg:text-left">
-          <div>
-            <h1 className="m-0 text-4xl font-bold tracking-tight md:text-5xl xl:text-6xl 3xl:text-8xl">
+        <div className="grid items-center lg:grid-cols-2 px-6 pt-16 lg:px-36 xl:px-48 4xl:px-72 pb-20 text-center lg:text-left md:gap-12">
+          <div className="w-full flex flex-col items-center lg:items-start 3xl:max-w-2xl">
+            <h1 className="m-0 text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-[2.5rem] xl:text-6xl 3xl:text-7xl 4xl:text-8xl">
               {title}
               <br />
               <span className="text-sky-400">{highlight}</span>
             </h1>
-            <p className={`${textSize} my-4 leading-6 max-w-md 3xl:max-w-2xl`}>
+            <p
+              className={`${textSize} my-4 leading-6 max-w-md lg:max-w-xs xl:max-w-md 3xl:max-w-lg 4xl:max-w-2xl`}
+            >
               {description}
             </p>
-            <button className="bg-sky-700 px-8 py-4 rounded-full mt-2 shadow-lg">
-              <p
-                className={`${textSize} flex gap-2 items-center justify-center font-semibold`}
-              >
-                Saiba mais
-                <ArrowDownCircleIcon className="h-5 w-5" />
-              </p>
+
+            <button
+              className="bg-sky-700 hover:bg-sky-600 px-8 py-4 rounded-full mt-2 shadow-lg active:bg-sky-500 cursor-pointer"
+              type="button"
+            >
+              <Link href="#">
+                <p
+                  className={`${textSize} flex gap-2 items-center justify-center font-semibold`}
+                >
+                  Saiba mais
+                  <ArrowDownCircleIcon className="h-5 w-5" />
+                </p>
+              </Link>
             </button>
           </div>
-          <div className="mb-12 lg:mb-0">
+          <div className="mb-12 md:mb-0 md:px-20 lg:px-0">
             <VideoPresentation
               url={
                 "https://www.youtube.com/embed/e16G3tpCq-M?si=fH5puVCZQn6UPNhd"
@@ -48,13 +57,13 @@ export default function HeroSection({ title, highlight, description }) {
             />
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] -z-[100]">
           <svg
             dataname="Wavy"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
-            className="relative block w-[calc(266%+1.3px)] h-[14.8125rem] md:w-[calc(267%+1.3px)] md:h-[27.25rem] xl:w-[calc(148%+1.3px)] xl:h-[20rem] 3xl:h-[22.5rem] fill-white -z-50"
+            className="relative block w-[calc(266%+1.3px)] h-[14.8125rem] md:w-[calc(267%+1.3px)] md:h-[27.25rem] lg:w-[calc(148%+1.3px)] lg:h-[20rem] 3xl:h-[22.5rem] fill-white -z-50"
           >
             <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
           </svg>
