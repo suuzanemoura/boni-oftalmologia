@@ -45,7 +45,7 @@ export default function PopoverFontSize({ position }) {
         leaveTo="opacity-0 translate-y-1"
       >
         <Popover.Panel
-          className={`absolute ${position} top-full z-10 mt-3 w-screen sm:max-w-[280px] max-w-[230px] overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-gray-900/5`}
+          className={`absolute ${position} top-full z-10 mt-3 w-screen sm:max-w-[300px] max-w-[230px] overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-gray-900/5`}
         >
           <div className="p-2 sm:p-4">
             {sizesVariation.map((item) => (
@@ -54,7 +54,7 @@ export default function PopoverFontSize({ position }) {
                 onClick={() => setTextSize(item.fontSize)}
                 className={"w-full text-left"}
               >
-                <div className="group relative flex items-center gap-x-6 rounded-lg  p-4  text-sm leading-4 hover:bg-gray-50 cursor-pointer">
+                <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-4 hover:bg-gray-50 cursor-pointer">
                   <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -66,11 +66,15 @@ export default function PopoverFontSize({ position }) {
                     </svg>
                   </div>
                   <div className="flex-auto">
-                    <p className="block font-medium text-base text-gray-900">
+                    <p
+                      className={`block font-medium ${item.fontSize} text-gray-900`}
+                    >
                       {item.name}
                     </p>
                     <span className="absolute inset-0" />
-                    <p className="mt-1 text-gray-600">{item.description}</p>
+                    <p className={`mt-1 ${item.fontSize} text-gray-600`}>
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               </Popover.Button>
