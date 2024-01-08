@@ -21,7 +21,7 @@ export default function Home() {
           }
         />
         <section>
-          <div className={`flex flex-col gap-6 p-24`}>
+          <div className={`flex flex-col gap-6 p-12 xs:p-16 sm:p-24`}>
             <p className={`${textSize}`}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               pretium eleifend mauris a rhoncus. Pellentesque posuere semper

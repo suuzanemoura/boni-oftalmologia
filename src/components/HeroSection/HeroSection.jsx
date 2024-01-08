@@ -8,7 +8,7 @@ export default function HeroSection({ title, highlight, description }) {
   const { textSize } = useContext(FontContext);
 
   return (
-    <section className="py-6 relative flex flex-col items-center pt-20 md:min-h-[54rem] lg:min-h-[36rem] 3xl:min-h-[46rem] 4xl:min-h-[54rem]">
+    <section className="py-6 relative flex flex-col items-center pt-20 min-h-[38rem] xs:min-h-[44rem] sm:min-h-[50rem] md:min-h-[58rem] lg:min-h-[36rem] 3xl:min-h-[46rem] 4xl:min-h-[54rem]">
       <div
         className="absolute inset-x-0 -top-40 -z-50 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         aria-hidden="true"
@@ -22,15 +22,15 @@ export default function HeroSection({ title, highlight, description }) {
         />
       </div>
       <div className="absolute top-0 left-0 overflow-hidden leading-[0] w-full pb-24">
-        <div className="grid items-center lg:grid-cols-2 px-6 pt-16 lg:px-36 xl:px-48 4xl:px-72 pb-20 text-center lg:text-left md:gap-12">
+        <div className="grid items-center lg:grid-cols-2 px-6 pt-16 lg:px-44 xl:px-48 3xl:px-60 4xl:px-72 pb-20 text-center lg:text-left md:gap-12 gap-8 sm:gap-10">
           <div className="w-full flex flex-col items-center lg:items-start 3xl:max-w-2xl">
-            <h1 className="m-0 text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-[2.5rem] xl:text-6xl 3xl:text-7xl 4xl:text-8xl">
+            <h1 className="m-0 text-4xl font-bold tracking-tight xs:text-5xl sm:text-6xl md:text-7xl lg:text-[2.5rem] xl:text-6xl 2xl:text-7xl 3xl:text-8xl">
               {title}
               <br />
               <span className="text-sky-400">{highlight}</span>
             </h1>
             <p
-              className={`${textSize} my-4 leading-6 max-w-md lg:max-w-xs xl:max-w-md 3xl:max-w-lg 4xl:max-w-2xl`}
+              className={`${textSize} my-4 leading-6 max-w-md 2xs:max-w-xs sm:max-w-md lg:max-w-xs xl:max-w-md 2xl:max-w-lg 3xl:max-w-2xl`}
             >
               {description}
             </p>
@@ -49,7 +49,7 @@ export default function HeroSection({ title, highlight, description }) {
               </Link>
             </button>
           </div>
-          <div className="mb-12 md:mb-0 md:px-20 lg:px-0">
+          <div className="mb-[-62px] px-3 md:mb-0 xs:px-10 md:px-20 lg:px-0">
             <VideoPresentation
               url={
                 "https://www.youtube.com/embed/e16G3tpCq-M?si=fH5puVCZQn6UPNhd"
@@ -63,7 +63,7 @@ export default function HeroSection({ title, highlight, description }) {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
-            className="relative block w-[calc(266%+1.3px)] h-[14.8125rem] md:w-[calc(267%+1.3px)] md:h-[27.25rem] lg:w-[calc(148%+1.3px)] lg:h-[20rem] 3xl:h-[22.5rem] fill-white -z-50"
+            className="relative block w-[calc(266%+1.3px)] h-[18.5rem] md:w-[calc(267%+1.3px)] xs:h-[27.25rem] lg:w-[calc(148%+1.3px)] lg:h-[20rem] 3xl:h-[22.5rem] fill-white -z-50"
           >
             <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
           </svg>
