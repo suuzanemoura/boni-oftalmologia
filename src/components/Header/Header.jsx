@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import DialogNavBar from "./DialogNavBar";
-import NavBar from "./NavBar";
-import NavBarMobile from "./NavBarMobile";
+import DialogNavBar from "../_ui/Dialog/DialogNavbar";
+import NavBar from "../_ui/Navbar/Navbar";
+import NavBarMobile from "../_ui/Navbar/NavbarMobile";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

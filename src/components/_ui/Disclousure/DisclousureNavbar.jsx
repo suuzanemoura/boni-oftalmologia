@@ -7,7 +7,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function DisclosureNavBar({ setMobileMenuOpen }) {
+export default function DisclosureNavbar({ setMobileMenuOpen }) {
   const { setTextSize, sizesVariation } = useContext(FontContext);
 
   return (

@@ -1,5 +1,5 @@
 import { ArrowDownCircleIcon } from "@heroicons/react/20/solid";
-import VideoPresentation from "./VideoPresentation";
+import VideoPresentation from "../_ui/VideoPresentation/VideoPresentation";
 import { useContext } from "react";
 import { FontContext } from "@/contexts/FontContext";
 import Link from "next/link";
