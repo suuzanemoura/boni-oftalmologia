@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../../public/images/image_logo_olho_azul.png";
-import doctoralia from "../../../public/images/doctoralia.png";
+import logo from "@/public/images/image_logo_olho_azul.png";
+import doctoralia from "@/public/images/doctoralia.png";
 import {
   DevicePhoneMobileIcon,
   EnvelopeIcon,
-  MapIcon,
   MapPinIcon,
 } from "@heroicons/react/20/solid";
 
