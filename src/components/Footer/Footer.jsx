@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../../public/images/image_logo_olho_azul.png";
-import doctoralia from "../../../public/images/doctoralia.png";
+import logo from "@/public/images/image_logo_olho_azul.png";
+import doctoralia from "@/public/images/doctoralia.png";
 import {
   DevicePhoneMobileIcon,
   EnvelopeIcon,
-  MapIcon,
   MapPinIcon,
 } from "@heroicons/react/20/solid";
 
@@ -117,7 +116,7 @@ export default function Footer() {
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-center">
           <p className="text-sm text-gray-500 sm:text-center">
-            © 2023 Dr. Pedro Boni - Oftalmologista. Todos os direitos
+            © 2024 Dr. Pedro Boni - Oftalmologista. Todos os direitos
             reservados.
           </p>
         </div>

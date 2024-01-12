@@ -1,10 +1,10 @@
 import { CursorArrowRippleIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
-import PopoverNavBar from "./PopoverNavBar";
-import logo from "../../../public/images/image_logo_drpedroboni.png";
+import PopoverNavBar from "../Popover/PopoverNavBar";
+import logo from "@/public/images/image_logo_drpedroboni.png";
 
-export default function NavBar() {
+export default function Navbar() {
   return (
     <nav
       className="hidden lg:flex items-start lg:items-center justify-between p-8 lg:py-10 md:px-14 lg:px-16 xl:px-20"

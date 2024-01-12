@@ -1,4 +1,4 @@
-import { FontContext } from "@/contexts/FontContext";
+import { FontContext } from "@/src/contexts/FontContext";
 import { Disclosure } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useContext } from "react";
@@ -7,7 +7,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function DisclosureNavBar({ setMobileMenuOpen }) {
+export default function DisclosureNavbar({ setMobileMenuOpen }) {
   const { setTextSize, sizesVariation } = useContext(FontContext);
 
   return (

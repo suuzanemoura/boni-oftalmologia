@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import DisclosureNavBar from "./DisclousureNavBar";
+import DisclosureNavBar from "../Disclousure/DisclousureNavbar";
 import { Dialog, Transition } from "@headlessui/react";
 
 import { XMarkIcon } from "@heroicons/react/24/outline";
@@ -9,10 +9,10 @@ import {
   CursorArrowRippleIcon,
   ChevronRightIcon,
 } from "@heroicons/react/20/solid";
-import logo_azul from "../../../public/images/image_logo_drpedroboni_azul.png";
+import logo_azul from "@/public/images/image_logo_drpedroboni_azul.png";
 import "animate.css";
 
-export default function DialogNavBar({ mobileMenuOpen, setMobileMenuOpen }) {
+export default function DialogNavbar({ mobileMenuOpen, setMobileMenuOpen }) {
   return (
     <Transition.Root
       show={mobileMenuOpen}

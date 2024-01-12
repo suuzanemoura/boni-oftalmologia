@@ -2,10 +2,10 @@ import { Bars3Icon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
 
-import logo from "../../../public/images/image_logo_drpedroboni.png";
-import PopoverFontSize from "./PopoverFontSize";
+import logo from "@/public/images/image_logo_drpedroboni.png";
+import PopoverFontSize from "../Popover/PopoverFontSize";
 
-export default function NavBarMobile({ setMobileMenuOpen }) {
+export default function NavbarMobile({ setMobileMenuOpen }) {
   return (
     <nav
       className="flex lg:hidden items-start lg:items-center justify-between p-8 lg:py-10 md:px-14 lg:px-16 xl:px-20"

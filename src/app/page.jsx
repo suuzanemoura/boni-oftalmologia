@@ -1,8 +1,9 @@
 "use client";
 
-import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
-import HeroSection from "@/components/HeroSection/HeroSection";
+import Footer from "@/src/components/Footer/Footer";
+import Header from "@/src/components/Header/Header";
+import HeroSection from "@/src/components/HeroSection/HeroSection";
+import ServicesSection from "@/src/components/ServiceSection/ServicesSection";
 import { FontContext } from "@/contexts/FontContext";
 import { useContext } from "react";
 
@@ -20,6 +21,9 @@ export default function Home() {
             "Sou oftalmologista, especialista em Catarata, Glaucoma e Córnea, em melhorar sua visão e melhorar sua saúde ocular!"
           }
         />
+
+        <ServicesSection />
+
         <section>
           <div className={`flex flex-col gap-6 p-12 xs:p-16 sm:p-24`}>
             <p className={`${textSize}`}>
