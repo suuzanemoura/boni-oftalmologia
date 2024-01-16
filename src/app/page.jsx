@@ -4,7 +4,7 @@ import Footer from "@/src/components/Footer/Footer";
 import Header from "@/src/components/Header/Header";
 import HeroSection from "@/src/components/HeroSection/HeroSection";
 import ServicesSection from "@/src/components/ServiceSection/ServicesSection";
-import { FontContext } from "@/contexts/FontContext";
+import { FontContext } from "@/src/contexts/FontContext";
 import { useContext } from "react";
 
 export default function Home() {
