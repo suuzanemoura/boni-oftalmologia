@@ -1,6 +1,6 @@
 import { Source_Serif_4, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
-import { FontContextProvider } from "@/contexts/FontContext";
+import { FontContextProvider } from "@/src/contexts/FontContext";
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],

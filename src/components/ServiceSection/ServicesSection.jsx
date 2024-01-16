@@ -6,6 +6,7 @@ import SliderImg03 from "@/public/images/image_slider_03.jpeg";
 import SliderImg04 from "@/public/images/image_slider_04.JPG";
 import { SparklesIcon } from "@heroicons/react/20/solid";
 import Slider from "../Slider/Slider";
+import Services from "../Services/Services";
 
 export default function ServicesSection() {
   const { textSize } = useContext(FontContext);
@@ -52,6 +53,7 @@ export default function ServicesSection() {
         para o mundo.
       </p>
       <Slider items={items} />
+      <Services />
     </section>
   );
 }

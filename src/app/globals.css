@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-rgb: 2,43,84;
+  --background-rgb: 2, 43, 84;
   --background-start-rgba: 1, 28, 54, 1;
   --background-middle-rgba: 4, 70, 120, 1;
   --background-semiend-rgba: 1, 30, 58, 1;
@@ -14,9 +14,26 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-  background: linear-gradient(45deg, rgba(var(--background-start-rgba)) 0%, rgba(var(--background-middle-rgba)) 36%, rgba(var(--background-semiend-rgba)) 82%, rgba(var(--background-end-rgba)) 100%);
-  background: -moz-linear-gradient(45deg, rgba(var(--background-start-rgba)) 0%, rgba(var(--background-middle-rgba)) 36%, rgba(var(--background-semiend-rgba)) 82%, rgba(var(--background-end-rgba)) 100%);
-  background: -webkit-linear-gradient(45deg, rgba(var(--background-start-rgba)) 0%, rgba(var(--background-middle-rgba)) 36%, rgba(var(--background-semiend-rgba)) 82%, rgba(var(--background-end-rgba)) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(var(--background-start-rgba)) 0%,
+    rgba(var(--background-middle-rgba)) 36%,
+    rgba(var(--background-semiend-rgba)) 82%,
+    rgba(var(--background-end-rgba)) 100%
+  );
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(var(--background-start-rgba)) 0%,
+    rgba(var(--background-middle-rgba)) 36%,
+    rgba(var(--background-semiend-rgba)) 82%,
+    rgba(var(--background-end-rgba)) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(var(--background-start-rgba)) 0%,
+    rgba(var(--background-middle-rgba)) 36%,
+    rgba(var(--background-semiend-rgba)) 82%,
+    rgba(var(--background-end-rgba)) 100%
+  );
   font-family: var(--font-source-sans), sans-serif;
 }
-
