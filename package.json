@@ -11,6 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
+    "@lifarl/react-scroll-snap-slider": "^2.0.5",
     "animate.css": "^4.1.1",
     "next": "14.0.4",
     "react": "^18",

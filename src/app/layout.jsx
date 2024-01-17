@@ -1,5 +1,6 @@
-import { Source_Serif_4, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
+import { Source_Serif_4, Source_Sans_3 } from "next/font/google";
+
 import { FontContextProvider } from "@/src/contexts/FontContext";
 
 const sourceSerif = Source_Serif_4({
