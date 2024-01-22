@@ -1,84 +1,8 @@
-import { useState, useRef, useEffect } from "react";
-import Service01 from "@/public/images/image_catarata.jpg";
-import Service02 from "@/public/images/image_glaucoma.jpg";
-import Service03 from "@/public/images/image_cirurgia_refrativa.jpg";
-import Service04 from "@/public/images/image_ceratocone.jpg";
-import Service05 from "@/public/images/image_plastica_ocular.png";
 import ServiceCard from "./ServiceCard";
 import { Slider } from "@lifarl/react-scroll-snap-slider";
 import NavArrow from "./NavArrow";
 
-export default function Services() {
-  const maxScrollWidth = useRef(0);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const carousel = useRef(null);
-
-  const data = {
-    resources: [
-      {
-        title: "Catarata",
-        imageUrl: Service01,
-      },
-      {
-        title: "Glaucoma",
-        imageUrl: Service02,
-      },
-      {
-        title: "Cirurgia Refrativa",
-        imageUrl: Service03,
-      },
-      {
-        title: "Ceratocone",
-        imageUrl: Service04,
-      },
-      {
-        title: "Plástica Ocular",
-        imageUrl: Service05,
-      },
-    ],
-  };
-
-  const movePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prevState) => prevState - 1);
-    }
-  };
-
-  const moveNext = () => {
-    if (
-      carousel.current !== null &&
-      carousel.current.offsetWidth * currentIndex <= maxScrollWidth.current
-    ) {
-      setCurrentIndex((prevState) => prevState + 1);
-    }
-  };
-
-  const isDisabled = (direction) => {
-    if (direction === "prev") {
-      return currentIndex <= 0;
-    }
-
-    if (direction === "next" && carousel.current !== null) {
-      return (
-        carousel.current.offsetWidth * currentIndex >= maxScrollWidth.current
-      );
-    }
-
-    return false;
-  };
-
-  useEffect(() => {
-    if (carousel !== null && carousel.current !== null) {
-      carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
-    }
-  }, [currentIndex]);
-
-  useEffect(() => {
-    maxScrollWidth.current = carousel.current
-      ? carousel.current.scrollWidth - carousel.current.offsetWidth
-      : 0;
-  }, []);
-
+export default function Services({ data }) {
   const renderCustomArrow = ({ direction, ref, onClick }) => (
     <NavArrow
       ref={ref}
@@ -97,11 +21,11 @@ export default function Services() {
           renderCustomArrow={renderCustomArrow}
           slideWidth={256}
         >
-          {data.resources.map((resource, index) => {
+          {data.map((service, index) => {
             return (
               <ServiceCard
                 key={index}
-                resource={resource}
+                resource={service}
               />
             );
           })}

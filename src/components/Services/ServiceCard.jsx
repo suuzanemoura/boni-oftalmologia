@@ -7,7 +7,7 @@ export default function ServiceCard({ resource }) {
         <Image
           src={resource.imageUrl}
           alt={resource.title}
-          priority={false}
+          priority={`${resource.title === "Catarata" ? true : false}`}
           className="w-full h-full aspect-square object-cover rounded-t-xl"
         />
         <h3 className="py-4 3xs:py-6 px-3 mx-auto text-2xl bg-sky-600 text-white rounded-b-xl uppercase font-bold">
