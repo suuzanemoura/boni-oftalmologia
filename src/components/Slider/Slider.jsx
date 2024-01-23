@@ -46,7 +46,7 @@ export default function Slider({ items }) {
   }, []);
 
   return (
-    <div className=" max-w-max mx-auto text-center flex flex-col lg:flex-row items-center gap-12 lg:px-8 xl:px-36 py-8">
+    <div className="max-w-max mx-auto text-center flex flex-col lg:flex-row items-center gap-12 lg:px-8 xl:px-36 py-8">
       <div className="transition-all duration-150 delay-300 ease-in-out lg:min-w-max">
         <div
           className="relative flex flex-col"
