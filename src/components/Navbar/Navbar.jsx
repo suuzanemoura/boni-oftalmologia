@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PopoverNavBar from "../Popover/PopoverNavBar";
 import logo from "@/public/images/image_logo_drpedroboni.png";
+import Button from "../Button/Button";
 
 export default function Navbar() {
   return (
@@ -25,15 +26,14 @@ export default function Navbar() {
         </Link>
       </div>
       <PopoverNavBar />
-      <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        <Link
-          href="https://www.doctoralia.com.br/z/oMriYf"
-          target="_blank"
-          className="rounded-full px-6 mx-1 py-2.5 font-bold leading-6 bg-white text-boni-blue-200 shadow-sm hover:bg-boni-blue-100 hover:text-white active:bg-sky-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-boni-blue-200 uppercase flex justify-center items-center animate__animated animate__pulse animate-[1s_ease-in-out_infinite] gap-x-1.5 ml-6 lg:ml-12 xl:ml-16 md:text-sm 2xl:text-base w-fit 3xl:text-xl"
+      <div className="hidden lg:flex lg:flex-1 lg:justify-end ml-6 lg:ml-12 xl:ml-16 animate__animated animate__pulse animate-[1s_ease-in-out_infinite]">
+        <Button
+          linkButton={"https://www.doctoralia.com.br/z/oMriYf"}
+          fontSize={"md:text-sm 2xl:text-base 3xl:text-xl"}
         >
           Agende sua consulta!
           <CursorArrowRippleIcon className="h-6 md:h-7 xl:6" />
-        </Link>
+        </Button>
       </div>
     </nav>
   );
