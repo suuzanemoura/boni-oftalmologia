@@ -6,6 +6,7 @@ import {
   DevicePhoneMobileIcon,
   EnvelopeIcon,
   MapPinIcon,
+  PhoneIcon,
 } from "@heroicons/react/20/solid";
 
 export default function Footer() {
@@ -77,6 +78,16 @@ export default function Footer() {
                 Onde me encontrar
               </h2>
               <ul className="text-gray-500 text-sm lg:text-base font-medium flex flex-col gap-2 text-center md:text-left items-center md:items-start">
+                <Link
+                  href="tel:(21)34001280"
+                  className="hover:underline"
+                  target="_blank"
+                >
+                  <li className="flex gap-1.5">
+                    <PhoneIcon className="h-5 w-5 text-boni-blue-200" />
+                    (21) 3400-1280
+                  </li>
+                </Link>
                 <Link
                   href="https://api.whatsapp.com/send/?phone=5521999132833&text=Ol%C3%A1%21+Vim+do+site+do+Dr.+Pedro+Boni+e+gostaria+de+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
                   className="hover:underline"

@@ -11,8 +11,11 @@ import Service03 from "@/public/images/image_cirurgia_refrativa.jpg";
 import Service04 from "@/public/images/image_ceratocone.jpg";
 import Service05 from "@/public/images/image_plastica_ocular.png";
 import Services from "../Services/Services";
+import { useContext } from "react";
+import { FontContext } from "@/src/contexts/FontContext";
 
 export default function ServicesSection() {
+  const { textSize } = useContext(FontContext);
   const sliderItems = [
     {
       img: SliderImg01,
@@ -68,12 +71,12 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="w-full bg-white bg-blend-screen px-8 lg:px-20 pt-3 lg:pt-6 pb-10 lg:pb-28 text-boni-blue-100 flex flex-col items-center text-center gap-4">
+    <section className="w-full bg-white bg-blend-screen px-8 xs:px-12 sm:px-24 md:px-32 pt-6 lg:pt-12 pb-10 lg:pb-28 text-boni-blue-100 flex flex-col items-center text-center gap-4">
       <h2 className="text-2xl lg:text-3xl font-bold max-w-6xl">
         Meu propósito é fazer com que o paciente tenha uma experiencia única e
         sinta-se acolhido e confiante no tratamento oftalmológico!
       </h2>
-      <p className="text-xl text-slate-900 font-medium">
+      <p className={`${textSize} text-slate-900 font-medium px-6`}>
         Meu foco é contribuir para que nossos pacientes tenham um novo olhar
         para o mundo.
       </p>

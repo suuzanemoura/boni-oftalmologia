@@ -12,7 +12,7 @@ export default function Services({ data }) {
   );
 
   return (
-    <div className="mt-12 mb-6 mx-auto">
+    <div className="lg:mt-12 mb-12 lg:mb-6 mx-auto">
       <h2 className="text-3xl 2xs:text-4xl leading-8 font-semibold mb-12 text-slate-700">
         Experiência em:
       </h2>
