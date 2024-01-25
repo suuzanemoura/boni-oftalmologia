@@ -70,7 +70,7 @@ export default function Slider({ items }) {
                 width={375}
                 height={500}
                 alt={item.alt}
-                priority={false}
+                loading="lazy"
               />
             </Transition>
           ))}
