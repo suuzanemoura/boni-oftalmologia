@@ -42,15 +42,11 @@ export default function ServicesSection() {
     },
   ];
   return (
-    <section className="w-full bg-white bg-blend-screen px-8 xs:px-12 sm:px-24 md:px-32 pt-6 lg:pt-12 pb-10 lg:pb-28 text-boni-blue-100 flex flex-col items-center text-center gap-4">
-      <h2 className="text-2xl lg:text-3xl font-bold max-w-6xl">
+    <section className="w-full bg-white bg-blend-screen px-8 xs:px-12 sm:px-24 md:px-32 pt-6 lg:pt-12 pb-10 lg:pb-28 text-boni-blue-100 flex flex-col items-center gap-4 justify-center">
+      <h2 className="text-2xl lg:text-3xl font-bold xl:px-32">
         Meu propósito é fazer com que o paciente tenha uma experiencia única e
         sinta-se acolhido e confiante no tratamento oftalmológico!
       </h2>
-      <p className={`${textSize} text-slate-900 font-medium px-6`}>
-        Meu foco é contribuir para que nossos pacientes tenham um novo olhar
-        para o mundo.
-      </p>
       <Slider items={sliderItems} />
       <Services />
     </section>
