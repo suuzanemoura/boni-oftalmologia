@@ -22,21 +22,17 @@ export default function HeroSection({ title, highlight, description }) {
           }}
         />
       </div>
-      <div className="pt-6 lg:pt-24 grid items-center lg:grid-cols-2 px-8 lg:px-32 xl:px-48 3xl:px-60 4xl:px-72 text-center lg:text-left md:gap-12 gap-8 sm:gap-10 w-full">
-        <div className="w-full flex flex-col items-center lg:items-start 3xl:max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight 2xs:text-5xl sm:text-6xl md:text-7xl lg:text-[2.5rem] xl:text-6xl 2xl:text-7xl 3xl:text-8xl">
+      <div className="pt-6 lg:pt-24 grid items-center lg:grid-cols-2 px-8 lg:px-32 xl:px-48 3xl:px-60 4xl:px-72 md:gap-12 gap-8 sm:gap-10 w-full">
+        <div className="w-full flex flex-col px-6 xs:px-16 md:px-24 lg:px-0 3xl:max-w-2xl">
+          <h1 className="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-bold tracking-tight">
             {title}
-            <br />
+            <br className="hidden lg:block" />
             <span className="text-sky-400">{highlight}</span>
           </h1>
-          <p
-            className={`${textSize} my-4 leading-6 max-w-md 2xs:max-w-xs sm:max-w-md lg:max-w-xs xl:max-w-md 2xl:max-w-lg 3xl:max-w-2xl`}
-          >
-            {description}
-          </p>
+          <p className={`${textSize} my-4 leading-6`}>{description}</p>
 
           <button
-            className="bg-sky-700 hover:bg-sky-600 px-8 py-4 rounded-full mt-2 shadow-lg active:bg-sky-500 cursor-pointer"
+            className="bg-sky-700 hover:bg-sky-600 px-8 py-4 rounded-full mt-2 shadow-lg active:bg-sky-500 cursor-pointer w-fit"
             type="button"
           >
             <Link href="#">
