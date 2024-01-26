@@ -118,7 +118,7 @@ export default function Slider({ items }) {
                   : "hidden lg:block lg:opacity-50 lg:group-hover:opacity-100 lg:group-focus:opacity-100 lg:transition-opacity"
               }`}
             >
-              <span className="block text-center lg:text-left font-medium text-slate-900 mb-2">
+              <span className="block text-left font-medium text-slate-900 mb-2">
                 <h3
                   className={`text-xl font-bold text-boni-blue-200 ${
                     active === index ? "text-2xl" : ""
