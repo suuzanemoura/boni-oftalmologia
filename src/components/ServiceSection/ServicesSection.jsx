@@ -5,12 +5,7 @@ import SliderImg04 from "@/public/images/image_slider_04.JPG";
 import { SparklesIcon } from "@heroicons/react/20/solid";
 import Slider from "../Slider/Slider";
 
-import Service01 from "@/public/images/image_catarata.jpg";
-import Service02 from "@/public/images/image_glaucoma.jpg";
-import Service03 from "@/public/images/image_cirurgia_refrativa.jpg";
-import Service04 from "@/public/images/image_ceratocone.jpg";
-import Service05 from "@/public/images/image_plastica_ocular.png";
-import Services from "../Services/Services";
+import Services from "./Services/Services";
 import { useContext } from "react";
 import { FontContext } from "@/src/contexts/FontContext";
 
@@ -46,30 +41,6 @@ export default function ServicesSection() {
       buttonIcon: SparklesIcon,
     },
   ];
-
-  const services = [
-    {
-      title: "Catarata",
-      imageUrl: Service01,
-    },
-    {
-      title: "Glaucoma",
-      imageUrl: Service02,
-    },
-    {
-      title: "Cirurgia Refrativa",
-      imageUrl: Service03,
-    },
-    {
-      title: "Ceratocone",
-      imageUrl: Service04,
-    },
-    {
-      title: "Plástica Ocular",
-      imageUrl: Service05,
-    },
-  ];
-
   return (
     <section className="w-full bg-white bg-blend-screen px-8 xs:px-12 sm:px-24 md:px-32 pt-6 lg:pt-12 pb-10 lg:pb-28 text-boni-blue-100 flex flex-col items-center text-center gap-4">
       <h2 className="text-2xl lg:text-3xl font-bold max-w-6xl">
@@ -81,7 +52,7 @@ export default function ServicesSection() {
         para o mundo.
       </p>
       <Slider items={sliderItems} />
-      <Services data={services} />
+      <Services />
     </section>
   );
 }

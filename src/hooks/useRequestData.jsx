@@ -1,18 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export const useRequestData = () => {
+export const useRequestData = (path) => {
+  const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
 
   const requestData = async (path) => {
     try {
       setIsLoading(true);
-      const data = await fetch(path).then((res) => res.json());
+      const response = await fetch(path).then((res) => res.json());
+      setData(response);
       setIsLoading(false);
-      return data;
+      setLoaded(true);
     } catch (error) {
-      setIsLoading(false);
-      return error.response;
+      setError(true);
     }
   };
-  return { isLoading, requestData };
+
+  useEffect(() => {
+    requestData(path);
+  }, [path]);
+
+  return [data, isLoading, loaded, error];
 };
