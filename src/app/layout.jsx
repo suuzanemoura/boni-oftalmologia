@@ -1,7 +1,6 @@
 import "./globals.css";
+import { Providers } from "@/src/providers/Providers";
 import { Source_Serif_4, Source_Sans_3 } from "next/font/google";
-
-import { FontContextProvider } from "@/src/contexts/FontContext";
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
@@ -57,7 +56,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <body className={`${sourceSans.variable} ${sourceSerif.variable}`}>
-        <FontContextProvider>{children}</FontContextProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

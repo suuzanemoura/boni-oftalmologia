@@ -1,12 +1,11 @@
+"use client";
 import { ArrowDownCircleIcon } from "@heroicons/react/20/solid";
 import VideoPresentation from "../VideoPresentation/VideoPresentation";
-
-import { FontContext } from "@/src/contexts/FontContext";
-import { useContext } from "react";
+import { useFontContext } from "@/src/contexts/FontContext";
 import Link from "next/link";
 
 export default function HeroSection({ title, highlight, description }) {
-  const { textSize } = useContext(FontContext);
+  const { textSize } = useFontContext();
 
   return (
     <section className="flex flex-col items-center w-full">

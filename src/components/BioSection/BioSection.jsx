@@ -1,11 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import drPedroBoni from "@/public/images/image_drpedroboni.jpg";
-import { useContext } from "react";
-import { FontContext } from "@/src/contexts/FontContext";
+import { useFontContext } from "@/src/contexts/FontContext";
 import Button from "../Button/Button";
 
 export default function BioSection() {
-  const { textSize } = useContext(FontContext);
+  const { textSize } = useFontContext();
 
   return (
     <section className="w-full px-8 py-24 lg:p-28 xl:py-36 xl:px-60 flex flex-col lg:flex-row items-center gap-12 justify-center">

@@ -1,3 +1,4 @@
+"use client";
 import { useRequestData } from "@/src/hooks/useRequestData";
 import YoutubeVideoCard from "../YoutubeVideoCard/YoutubeVideoCard";
 import { useEffect, useState } from "react";

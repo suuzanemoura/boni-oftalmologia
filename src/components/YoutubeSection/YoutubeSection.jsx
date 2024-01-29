@@ -1,3 +1,5 @@
+"use client";
+
 import { useRequestData } from "@/src/hooks/useRequestData";
 import Image from "next/image";
 import Link from "next/link";

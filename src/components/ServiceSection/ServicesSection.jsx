@@ -1,16 +1,14 @@
+"use client";
+
 import SliderImg01 from "@/public/images/image_slider_01.JPG";
 import SliderImg02 from "@/public/images/image_slider_02.JPG";
 import SliderImg03 from "@/public/images/image_slider_03.jpeg";
 import SliderImg04 from "@/public/images/image_slider_04.JPG";
 import { SparklesIcon } from "@heroicons/react/20/solid";
 import Slider from "../Slider/Slider";
-
 import Services from "./Services/Services";
-import { useContext } from "react";
-import { FontContext } from "@/src/contexts/FontContext";
 
 export default function ServicesSection() {
-  const { textSize } = useContext(FontContext);
   const sliderItems = [
     {
       img: SliderImg01,
