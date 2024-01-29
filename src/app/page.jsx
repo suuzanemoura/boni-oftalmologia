@@ -4,6 +4,7 @@ import HeroSection from "@/src/components/HeroSection/HeroSection";
 import ServicesSection from "@/src/components/ServiceSection/ServicesSection";
 import BioSection from "../components/BioSection/BioSection";
 import YoutubeSection from "../components/YoutubeSection/YoutubeSection";
+import { apiConfig } from "../config";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
 
         <ServicesSection />
         <BioSection />
-        <YoutubeSection />
+        <YoutubeSection apiConfig={apiConfig} />
       </main>
       <Footer />
     </>

@@ -10,16 +10,13 @@ import LoadingCircle from "../LoadingCircle/LoadingCircle";
 import { FontContext } from "@/src/contexts/FontContext";
 import Script from "next/script";
 
-export default function YoutubeSection() {
+export default function YoutubeSection({ apiConfig }) {
   const [channelInfo, setChannelInfo] = useState(null);
   const { textSize } = useContext(FontContext);
 
-  const channelApi = process.env.NEXT_PUBLIC_YOUTUBE_CHANNEL_API;
-  const apiKey = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
-  const pathChannelApi = `${channelApi}&id=UCYtyCitxL856Pzu4GcnNXjQ&key=${apiKey}`;
-
-  const [channelApiInfo, isLoading, loaded, error] =
-    useRequestData(pathChannelApi);
+  const [channelApiInfo, isLoading, loaded, error] = useRequestData(
+    apiConfig.url_channel_api,
+  );
 
   useEffect(() => {
     if (loaded) {
@@ -107,7 +104,7 @@ export default function YoutubeSection() {
               id={
                 channelApiInfo?.items[0].contentDetails.relatedPlaylists.uploads
               }
-              apiKey={apiKey}
+              url={apiConfig.url_playlistItems_api}
             />
           </div>
         </div>

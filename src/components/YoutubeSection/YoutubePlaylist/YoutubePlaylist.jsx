@@ -6,14 +6,13 @@ import AlertError from "../../AlertError/AlertError";
 import LoadingCircle from "../../LoadingCircle/LoadingCircle";
 import Carousel from "../../Carousel/Carousel";
 
-export default function YoutubePlaylist({ id, apiKey }) {
-  const playlistItemsApi = process.env.NEXT_PUBLIC_YOUTUBE_PLAYLIST_ITEMS_API;
+export default function YoutubePlaylist({ id, url }) {
   const [playlistItemsInfo, setplaylistItemsInfo] = useState(null);
 
-  const pathPlaylistItemsApi = `${playlistItemsApi}?part=snippet&maxResults=10&playlistId=${id}&key=${apiKey}`;
+  const urlPlaylistItemsApi = `${url}&playlistId=${id}`;
 
   const [playlistItemsApiInfo, isLoading, loaded, error] =
-    useRequestData(pathPlaylistItemsApi);
+    useRequestData(urlPlaylistItemsApi);
 
   useEffect(() => {
     if (loaded) {
