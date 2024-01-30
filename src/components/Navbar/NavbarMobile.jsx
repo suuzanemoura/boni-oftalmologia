@@ -1,9 +1,8 @@
 import { Bars3Icon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
-
-import logo from "@/public/images/image_logo_drpedroboni.png";
 import PopoverFontSize from "../Popover/PopoverFontSize";
+import { navBarConfig } from "@/src/config";
 
 export default function NavbarMobile({ setMobileMenuOpen }) {
   return (
@@ -13,14 +12,14 @@ export default function NavbarMobile({ setMobileMenuOpen }) {
     >
       <div className="flex lg:flex-1">
         <Link
-          href="/"
+          href={navBarConfig.link}
           className="-m-1.5 p-1.5 mr-6"
         >
-          <span className="sr-only">Dr. Pedro Boni</span>
+          <span className="sr-only">{navBarConfig.button_title}</span>
           <Image
             className="h-8 2xs:h-10 xs:h-12 w-auto object-contain"
-            src={logo}
-            alt="Logo do Dr. Pedro Boni"
+            src={navBarConfig.img}
+            alt={navBarConfig.alt}
             priority={true}
           />
         </Link>
@@ -32,7 +31,7 @@ export default function NavbarMobile({ setMobileMenuOpen }) {
           className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
           onClick={() => setMobileMenuOpen(true)}
         >
-          <span className="sr-only">Open main menu</span>
+          <span className="sr-only">Abrir menu de navegação</span>
           <Bars3Icon
             className="h-6 w-6"
             aria-hidden="true"

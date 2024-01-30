@@ -1,12 +1,12 @@
+"use client";
 import { ArrowDownCircleIcon } from "@heroicons/react/20/solid";
 import VideoPresentation from "../VideoPresentation/VideoPresentation";
-
-import { FontContext } from "@/src/contexts/FontContext";
-import { useContext } from "react";
+import { useFontContext } from "@/src/contexts/FontContext";
 import Link from "next/link";
+import { heroSectionConfig } from "@/src/config";
 
-export default function HeroSection({ title, highlight, description }) {
-  const { textSize } = useContext(FontContext);
+export default function HeroSection() {
+  const { textSize } = useFontContext();
 
   return (
     <section className="flex flex-col items-center w-full">
@@ -25,33 +25,33 @@ export default function HeroSection({ title, highlight, description }) {
       <div className="pt-6 lg:pt-24 grid items-center lg:grid-cols-2 px-8 lg:px-32 xl:px-48 3xl:px-60 4xl:px-72 md:gap-12 gap-8 sm:gap-10 w-full">
         <div className="w-full flex flex-col px-6 xs:px-16 md:px-24 lg:px-0 3xl:max-w-2xl">
           <h1 className="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-bold tracking-tight">
-            {title}
+            {heroSectionConfig.title}
             <br className="hidden lg:block" />
-            <span className="text-sky-400">{highlight}</span>
+            <span className="text-sky-400">{heroSectionConfig.highlight}</span>
           </h1>
-          <p className={`${textSize} my-4 leading-6`}>{description}</p>
+          <p className={`${textSize} my-4 leading-6`}>
+            {heroSectionConfig.description}
+          </p>
 
           <button
             className="bg-sky-700 hover:bg-sky-600 px-8 py-4 rounded-full mt-2 shadow-lg active:bg-sky-500 cursor-pointer w-fit"
             type="button"
           >
-            <Link href="#">
+            <Link
+              href={heroSectionConfig.Button_idHash_link}
+              className="transition duration-700 ease-in-out"
+            >
               <p
                 className={`${textSize} flex gap-2 items-center justify-center font-semibold`}
               >
-                Saiba mais
+                {heroSectionConfig.button}
                 <ArrowDownCircleIcon className="h-5 w-5" />
               </p>
             </Link>
           </button>
         </div>
         <div className="px-3 md:mb-0 xs:px-10 md:px-20 lg:px-0">
-          <VideoPresentation
-            url={
-              "https://www.youtube.com/embed/e16G3tpCq-M?si=fH5puVCZQn6UPNhd"
-            }
-            title={"Dr. Pedro Boni | Oftalmologista"}
-          />
+          <VideoPresentation url={heroSectionConfig.video_url} />
         </div>
       </div>
       <div

@@ -6,7 +6,7 @@ export default function ServiceCard({ service }) {
       <div className="w-56 h-56 3xs:h-64 3xs:w-64">
         <Image
           src={service.imageUrl}
-          alt={service.title}
+          alt={`Imagem de um olho com ${service.title}`}
           priority={`${service.title === "Catarata" ? true : false}`}
           className="w-full h-full aspect-square object-cover rounded-t-xl"
         />

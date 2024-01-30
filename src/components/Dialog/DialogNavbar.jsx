@@ -9,8 +9,8 @@ import {
   CursorArrowRippleIcon,
   ChevronRightIcon,
 } from "@heroicons/react/20/solid";
-import logo_azul from "@/public/images/image_logo_drpedroboni_azul.png";
 import "animate.css";
+import { navBarConfig } from "@/src/config";
 
 export default function DialogNavbar({ mobileMenuOpen, setMobileMenuOpen }) {
   return (
@@ -50,14 +50,14 @@ export default function DialogNavbar({ mobileMenuOpen, setMobileMenuOpen }) {
                 <Dialog.Panel className="pointer-events-auto relative w-screen min-[480px]:max-w-sm bg-white min-[480px]:rounded-s-3xl px-8 py-8 overflow-y-scroll">
                   <div className="flex items-start justify-between">
                     <Link
-                      href="/"
+                      href={navBarConfig.link}
                       className="-m-1.5 p-1.5"
                     >
-                      <span className="sr-only">Dr. Pedro Boni</span>
+                      <span className="sr-only">{navBarConfig.title}</span>
                       <Image
                         className="h-12 w-auto"
-                        src={logo_azul}
-                        alt="Logo Dr. Pedro Boni"
+                        src={navBarConfig.Img_blue}
+                        alt={navBarConfig.alt}
                         priority={true}
                       />
                     </Link>
@@ -66,7 +66,7 @@ export default function DialogNavbar({ mobileMenuOpen, setMobileMenuOpen }) {
                       className="-mx-2.5 -mt-1 rounded-md p-2.5 text-gray-700"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <span className="sr-only">Close menu</span>
+                      <span className="sr-only">Fechar menu de navegação</span>
                       <XMarkIcon
                         className="h-6 w-6"
                         aria-hidden="true"
@@ -76,66 +76,32 @@ export default function DialogNavbar({ mobileMenuOpen, setMobileMenuOpen }) {
                   <div className="mt-6 flow-root">
                     <div className="divide-y divide-gray-500/10">
                       <div className="space-y-2 pt-6 pl-2 divide-y divide-gray-500/10 text-lg font-medium leading-10 text-boni-blue-200">
-                        <Link
-                          href="/"
-                          className="-mx-3 pt-2 block"
-                        >
-                          <div className="flex w-full items-center justify-between hover:bg-gray-50 mb-2 rounded-lg pl-3 pr-3.5">
-                            Início <ChevronRightIcon className="h-5 w-5" />
-                          </div>
-                        </Link>
-                        <Link
-                          href="/#sobre"
-                          className="-mx-3 pt-2 block"
-                        >
-                          <div className="rounded-lg pl-3 pr-3.5 hover:bg-gray-50 flex w-full items-center justify-between">
-                            Sobre <ChevronRightIcon className="h-5 w-5" />
-                          </div>
-                        </Link>
-                        <Link
-                          href="/#serviços"
-                          className="-mx-3 pt-2 block"
-                        >
-                          <div className="rounded-lg pl-3 pr-3.5 hover:bg-gray-50 flex w-full items-center justify-between">
-                            Serviços <ChevronRightIcon className="h-5 w-5" />
-                          </div>
-                        </Link>
-                        <Link
-                          href="/#clinica"
-                          className="-mx-3 pt-2 block"
-                        >
-                          <div className="rounded-lg pl-3 pr-3.5 hover:bg-gray-50 flex w-full items-center justify-between">
-                            A Clínica <ChevronRightIcon className="h-5 w-5" />
-                          </div>
-                        </Link>
-                        <Link
-                          href="#depoimentos"
-                          className="-mx-3 pt-2 block"
-                        >
-                          <div className="rounded-lg pl-3 pr-3.5 hover:bg-gray-50 flex w-full items-center justify-between">
-                            Depoimentos <ChevronRightIcon className="h-5 w-5" />
-                          </div>
-                        </Link>
-                        <Link
-                          href="#contatos"
-                          scroll={false}
-                          className="-mx-3 pt-2 block"
-                        >
-                          <div className="rounded-lg pl-3 pr-3.5 hover:bg-gray-50 flex w-full items-center justify-between">
-                            Contatos <ChevronRightIcon className="h-5 w-5" />
-                          </div>
-                        </Link>
+                        {navBarConfig.nav_items.map((nav_item, index) => {
+                          return (
+                            <Link
+                              href={nav_item.url}
+                              className="-mx-3 pt-2 block"
+                              key={index}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              <div className="flex w-full items-center justify-between hover:bg-gray-50 mb-2 rounded-lg pl-3 pr-3.5">
+                                {nav_item.title}{" "}
+                                <ChevronRightIcon className="h-5 w-5" />
+                              </div>
+                            </Link>
+                          );
+                        })}
                         <DisclosureNavBar
                           setMobileMenuOpen={setMobileMenuOpen}
                         />
                       </div>
                       <div className="py-6 pl-2">
                         <Link
-                          href="https://www.doctoralia.com.br/z/oMriYf"
+                          href={navBarConfig.button_link}
                           target="_blank"
                           className="rounded-full px-4 mx-1 py-2.5 text-base font-medium leading-7 bg-boni-blue-200 text-white shadow-sm hover:bg-boni-blue-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-boni-blue-200 uppercase flex justify-center items-center animate__animated animate__pulse animate-[1s_ease-in-out_infinite] gap-x-1.5"
                         >
-                          Agende sua consulta!
+                          {navBarConfig.button_title}
                           <CursorArrowRippleIcon className="h-6" />
                         </Link>
                       </div>

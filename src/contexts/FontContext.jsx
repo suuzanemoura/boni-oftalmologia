@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const FontContext = createContext();
 
@@ -34,3 +34,5 @@ export function FontContextProvider({ children }) {
     </FontContext.Provider>
   );
 }
+
+export const useFontContext = () => useContext(FontContext);
