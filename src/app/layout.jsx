@@ -1,3 +1,4 @@
+import { siteConfig } from "../config/site";
 import { Providers } from "../providers/providers";
 import "./globals.css";
 import { Source_Serif_4, Source_Sans_3 } from "next/font/google";
@@ -15,27 +16,28 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://localhost:3000/"),
+  title: `${siteConfig.title}`,
+  description: `${siteConfig.description}`,
+  keywords: `${siteConfig.keywords}`,
+  metadataBase: new URL(`${siteConfig.url}`),
   alternates: {
     canonical: "/",
     languages: {
       "pt-BR": "/pt-BR",
     },
   },
-  title: "Dr. Pedro Boni | Oftalmologista",
-  description:
-    "Oftalmologista, especialista em Catarata, Glaucoma e Córnea. Te ajudo a preservar a visão!",
-  keywords: [
-    "oftalmologista, catarata, glaucoma, córnea, visão, oftalmologista cirurgião, médico oftalmo, problemas de visão",
-  ],
   openGraph: {
-    title: "Dr. Pedro Boni | Oftalmologista",
-    description:
-      "Oftalmologista, especialista em Catarata, Glaucoma e Córnea. Te ajudo a preservar a visão!",
-    siteName: "Dr. Pedro Boni | Oftalmologista",
-    images: "/images/image_drpedroboni.jpg",
-    locale: "pt_BR",
     type: "website",
+    url: `${siteConfig.url}${siteConfig.img}`,
+    title: `${siteConfig.title}`,
+    description: `${siteConfig.description}`,
+    siteName: `${siteConfig.title}`,
+    images: [
+      {
+        url: `${siteConfig.url}${siteConfig.img}`,
+      },
+    ],
+    locale: "pt_BR",
   },
   robots: {
     index: false,
@@ -45,10 +47,13 @@ export const metadata = {
       index: true,
       follow: false,
       noimageindex: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
     },
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.title}`,
+    description: `${siteConfig.description}`,
+    images: [`${siteConfig.url}${siteConfig.img}`],
   },
 };
 
