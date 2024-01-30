@@ -4,8 +4,10 @@ import { useState, useRef, useEffect, useContext } from "react";
 import Image from "next/image";
 import { Transition } from "@headlessui/react";
 import { FontContext } from "@/src/contexts/FontContext";
+import { servicesSectionConfig } from "@/src/config";
 
-export default function Slider({ items }) {
+export default function Slider() {
+  const items = servicesSectionConfig.slider_items;
   const duration = 5000;
   const itemsRef = useRef(null);
   const frame = useRef(0);
@@ -126,7 +128,7 @@ export default function Slider({ items }) {
                 >
                   {item.title}
                 </h3>
-                <p className={`${textSize}`}>{item.desc}</p>
+                <p className={`${textSize}`}>{item.description}</p>
               </span>
               <span
                 className="block relative w-full bg-slate-200 h-0.5 rounded-full mt-5"

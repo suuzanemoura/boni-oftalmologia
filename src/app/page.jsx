@@ -11,14 +11,7 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <HeroSection
-          title={"Vamos preservar"}
-          highlight={" a sua visão?"}
-          description={
-            "Sou oftalmologista, especialista em Catarata, Glaucoma e Córnea, em melhorar sua visão e melhorar sua saúde ocular!"
-          }
-        />
-
+        <HeroSection />
         <ServicesSection />
         <BioSection />
         <YoutubeSection apiConfig={apiConfig} />

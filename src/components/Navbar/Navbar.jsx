@@ -2,8 +2,8 @@ import { CursorArrowRippleIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
 import PopoverNavBar from "../Popover/PopoverNavBar";
-import logo from "@/public/images/image_logo_drpedroboni.png";
 import Button from "../Button/Button";
+import { navBarConfig } from "@/src/config";
 
 export default function Navbar() {
   return (
@@ -13,14 +13,14 @@ export default function Navbar() {
     >
       <div className="flex lg:flex-1">
         <Link
-          href="#"
+          href={navBarConfig.link}
           className="-m-1.5 p-1.5 mr-6"
         >
-          <span className="sr-only">Dr. Pedro Boni</span>
+          <span className="sr-only">{navBarConfig.title}</span>
           <Image
             className="h-12 w-auto object-contain 3xl:h-20"
-            src={logo}
-            alt="Logo do Dr. Pedro Boni"
+            src={navBarConfig.img}
+            alt={navBarConfig.alt}
             priority={true}
           />
         </Link>
@@ -28,10 +28,10 @@ export default function Navbar() {
       <PopoverNavBar />
       <div className="hidden lg:flex lg:flex-1 lg:justify-end ml-6 lg:ml-12 xl:ml-16 animate__animated animate__pulse animate-[1s_ease-in-out_infinite]">
         <Button
-          linkButton={"https://www.doctoralia.com.br/z/oMriYf"}
+          linkButton={navBarConfig.button_link}
           fontSize={"md:text-sm 2xl:text-base 3xl:text-xl"}
         >
-          Agende sua consulta!
+          {navBarConfig.button_title}
           <CursorArrowRippleIcon className="h-6 md:h-7 xl:6" />
         </Button>
       </div>

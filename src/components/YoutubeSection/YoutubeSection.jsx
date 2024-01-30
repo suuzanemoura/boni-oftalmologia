@@ -9,6 +9,7 @@ import AlertError from "../AlertError/AlertError";
 import LoadingCircle from "../LoadingCircle/LoadingCircle";
 import { FontContext } from "@/src/contexts/FontContext";
 import Script from "next/script";
+import { youtubeSectionConfig } from "@/src/config";
 
 export default function YoutubeSection({ apiConfig }) {
   const [channelInfo, setChannelInfo] = useState(null);
@@ -27,36 +28,38 @@ export default function YoutubeSection({ apiConfig }) {
   return (
     <section className="px-8 xs:px-16 md:px-32 xl:px-40 2xl:px-60 3xl:px-96 4xl:px-[22rem] py-32 bg-slate-300/85">
       {error ? (
-        <AlertError
-          title={
-            "Atenção! Informações do canal do Dr. Pedro Boni não foram foram carregados:"
-          }
-        >
+        <AlertError title={youtubeSectionConfig.alert_error_api.title}>
           <ul className="mt-1.5 list-disc list-inside">
-            <li>Por favor, verifique sua internet.</li>
-            <li>Depois recarregue a página e tente novamente.</li>
+            {youtubeSectionConfig.alert_error_api.info_list.map(
+              (info, index) => {
+                return <li key={index}>{info}</li>;
+              },
+            )}
           </ul>
         </AlertError>
       ) : isLoading ? (
         <LoadingCircle />
       ) : loaded && channelInfo?.items[0].statistics.videoCount == 0 ? (
-        <AlertError title={"Vídeos não encontrados:"}>
+        <AlertError title={youtubeSectionConfig.alert_error_notFound.title}>
           <ul className="mt-1.5 list-disc list-inside">
-            <li>
-              Não foram encontrados vídeos associados ao canal solicitado.
-            </li>
-            <li>Verifique sua conexão com a intenet.</li>
-            <li>Recarregue a página e tente novamente.</li>
+            {youtubeSectionConfig.alert_error_notFound.info_list.map(
+              (info, index) => {
+                return <li key={index}>{info}</li>;
+              },
+            )}
           </ul>
         </AlertError>
       ) : loaded && Number(channelInfo?.items[0].statistics.videoCount) > 0 ? (
         <div className="flex flex-col gap-8 justify-center items-center">
           <h3 className="text-xl text-sky-700 font-medium self-start uppercase flex items-center gap-2">
-            <span className="w-24 h-0.5 bg-sky-700 inline-block"></span> Youtube
+            <span className="w-24 h-0.5 bg-sky-700 inline-block"></span>{" "}
+            {youtubeSectionConfig.subtitle}
           </h3>
           <h2 className="text-2xl xs:text-4xl text-boni-blue-100 font-bold self-start uppercase -mt-6">
-            Confira dicas para <span className="text-sky-600">preservar</span>{" "}
-            sua visão!
+            {youtubeSectionConfig.title}
+            <span className="text-sky-600">
+              {youtubeSectionConfig.title_highlight}
+            </span>
           </h2>
 
           <div className="flex flex-col items-center gap-4 md:gap-0 md:items-start md:flex-row  bg-white/65 p-4 xs:p-8 w-full rounded-2xl justify-between">
@@ -93,8 +96,8 @@ export default function YoutubeSection({ apiConfig }) {
             </div>
             <Script src="https://apis.google.com/js/platform.js"></Script>
             <div
-              className="g-ytsubscribe !flex justify-end"
-              data-channelid="UCYtyCitxL856Pzu4GcnNXjQ"
+              className="g-ytsubscribe !flex !justify-end"
+              data-channelid={apiConfig.channel_id}
               data-layout="default"
               data-count="default"
             ></div>
