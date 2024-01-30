@@ -1,5 +1,5 @@
+import { Providers } from "../providers/providers";
 import "./globals.css";
-import { Providers } from "@/src/providers/Providers";
 import { Source_Serif_4, Source_Sans_3 } from "next/font/google";
 
 const sourceSerif = Source_Serif_4({
