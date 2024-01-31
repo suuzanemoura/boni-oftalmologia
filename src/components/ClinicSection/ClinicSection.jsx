@@ -22,7 +22,7 @@ export default function ClinicSection() {
           <Link
             href={clinicSectionConfig.subtitle_link}
             target="_blank"
-            className="hover:underline hover:text-sky-400"
+            className="hover:underline hover:text-sky-200"
           >
             <h3 className="flex gap-1">
               <MapPinIcon className="h-5 w-5" />

@@ -6,6 +6,7 @@ import BioSection from "../components/BioSection/BioSection";
 import YoutubeSection from "../components/YoutubeSection/YoutubeSection";
 import { apiConfig } from "../config";
 import ClinicSection from "../components/ClinicSection/ClinicSection";
+import TestimonialSection from "../components/TestimonialSection/TestimonialSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <BioSection />
         <YoutubeSection apiConfig={apiConfig} />
         <ClinicSection />
+        <TestimonialSection />
       </main>
       <Footer />
     </>
