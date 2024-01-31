@@ -11,7 +11,9 @@ export const useRequestData = (path) => {
   const requestData = async (path) => {
     try {
       setIsLoading(true);
-      const response = await fetch(path).then((res) => res.json());
+      const response = await fetch(path, { cache: "no-store" }).then((res) =>
+        res.json(),
+      );
       setData(response);
       setIsLoading(false);
       setLoaded(true);

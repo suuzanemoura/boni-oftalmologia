@@ -31,6 +31,7 @@ export default function Footer() {
                     key={index}
                     href={link.url}
                     target="_blank"
+                    className="fill-gray-500 hover:fill-sky-600"
                   >
                     {link.icon}
                     <span className="sr-only">{link.name}</span>
@@ -39,11 +40,11 @@ export default function Footer() {
               })}
             </div>
           </div>
-
+          <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8 lg:hidden" />
           <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4">
             <div>
               <Link
-                href="https://www.doctoralia.com.br/pedro-boni-goncalves/oftalmologista/rio-de-janeiro?utm_campaign=129107&utm_medium=link&utm_source=widget&utm_term=instagram-profile-link"
+                href={footerConfig.doctoralia_url}
                 target="_blank"
               >
                 <Image
@@ -52,11 +53,12 @@ export default function Footer() {
                 />
               </Link>
             </div>
+
             <div id={footerConfig.contatos.id}>
-              <h2 className="pt-3 lg:pt-4 mb-2 text-sm 2xs:text-md font-bold text-boni-blue-200 uppercase text-center md:text-left">
+              <h2 className="pt-3 lg:pt-4 mb-2 text-sm 2xs:text-md font-bold text-boni-blue-200 uppercase">
                 {footerConfig.contatos.title}
               </h2>
-              <ul className="text-gray-500 text-sm lg:text-base font-medium flex flex-col gap-2 text-center md:text-left items-center md:items-start">
+              <ul className="text-gray-500 text-sm lg:text-base font-medium flex flex-col gap-2">
                 {footerConfig.contatos.links.map((contato, index) => {
                   return (
                     <Link
