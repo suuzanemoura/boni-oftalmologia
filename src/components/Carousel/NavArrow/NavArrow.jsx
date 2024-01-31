@@ -11,13 +11,13 @@ const NavArrow = React.forwardRef(({ direction, onClick }, ref) => {
       direction={direction}
       onClick={onClick}
       ref={ref}
-      className={`absolute cursor-pointer transition-all ease-in-out bg-white p-2 rounded z-10 active:scale-90 ${
+      className={`absolute cursor-pointer transition-all ease-in-out bg-white p-2 rounded-full z-10 active:scale-90 ${
         direction === "next" && "right-3 xl:right-5"
       } ${direction === "prev" && "left-3 xl:left-5"}`}
     >
       <svg
         viewBox="0 0 8 8"
-        className="w-6 h-6 fill-[#676767]"
+        className="w-6 h-6 fill-boni-blue-100"
       >
         <path d={path} />
       </svg>
