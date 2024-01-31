@@ -12,9 +12,9 @@ export default function ClinicSection() {
   return (
     <section
       id={clinicSectionConfig.id}
-      className="w-full px-8 py-24 lg:p-28 xl:py-36 xl:px-60 flex flex-col lg:flex-row items-center gap-12 justify-center"
+      className="w-full px-8 py-24 lg:p-28 xl:py-36 2xl:px-60 flex flex-col lg:flex-row items-center gap-12 justify-center"
     >
-      <div className="flex flex-col gap-8 max-w-64 xs:max-w-[26rem] md:max-w-xl items-center lg:items-start">
+      <div className="flex flex-col gap-8 max-w-64 xs:max-w-[26rem] md:max-w-md lg:max-w-sm xl:max-w-lg items-center lg:items-start">
         <div>
           <h2 className="text-2xl md:text-3xl font-bold font-title uppercase text-sky-400">
             {clinicSectionConfig.title}
@@ -49,7 +49,7 @@ export default function ClinicSection() {
           {clinicSectionConfig.button}
         </Button>
       </div>
-      <div className="max-w-64 xs:max-w-[26rem] md:max-w-xl items-center lg:items-start">
+      <div className="max-w-64 xs:max-w-[26rem] lg:max-w-lg xl:max-w-md  items-center lg:items-start">
         <Image
           src={clinicSectionConfig.img}
           alt={clinicSectionConfig.alt}

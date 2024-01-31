@@ -29,7 +29,7 @@ export default function TestimonialSection() {
 
   return (
     <>
-      <section className="bg-gray-100 w-full flex flex-col lg:grid gap-4 md:gap-8 lg:gap-12 px-8 2xs:p-12 xs:p-20 py-24 md:px-28 lg:p-28 xl:py-36 xl:px-60 justify-center items-start">
+      <section className="bg-gray-100 w-full flex flex-col lg:grid gap-4 md:gap-8 px-8 2xs:p-12 xs:p-20 py-24 md:px-28 lg:p-28 2xl:px-60 justify-center items-start">
         <div className="lg:max-w-xl lg:row-span-1 lg:col-span-1">
           <h2 className="text-3xl font-bold text-boni-blue-100 sm:text-5xl xl:text-6xl">
             O que nossos pacientes dizem
