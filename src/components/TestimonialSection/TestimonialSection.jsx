@@ -5,8 +5,10 @@ import NavArrow from "../Carousel/NavArrow/NavArrow";
 import VideoPresentation from "../VideoPresentation/VideoPresentation";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { testimonialSectionConfig } from "@/src/config/testimonialSection";
+import { useFontContext } from "@/src/contexts/FontContext";
 
 export default function TestimonialSection() {
+  const { textSize } = useFontContext();
   const renderCustomArrow = ({ direction, ref, onClick }) => (
     <NavArrow
       ref={ref}
@@ -52,7 +54,7 @@ export default function TestimonialSection() {
               return (
                 <article
                   key={index}
-                  className="bg-white w-full text-boni-blue-300 p-16 flex flex-col gap-6"
+                  className="bg-white w-full text-boni-blue-300 p-12 flex flex-col gap-6"
                 >
                   <span className="flex">
                     <StarIcon className="h-5 w-5 fill-sky-600" />
@@ -61,9 +63,9 @@ export default function TestimonialSection() {
                     <StarIcon className="h-5 w-5 fill-sky-600" />
                     <StarIcon className="h-5 w-5 fill-sky-600" />
                   </span>
-                  <p className="text-wrap">{item.testimonial}</p>
-                  <footer className="text-sm font-medium text-gray-700">
-                    &mdash; {item.author}
+                  <p className={`${textSize} text-wrap`}>{item.testimonial}</p>
+                  <footer className={`${textSize} font-medium text-gray-700`}>
+                    <span className="text-sky-500">&mdash;</span> {item.author}
                   </footer>
                 </article>
               );
