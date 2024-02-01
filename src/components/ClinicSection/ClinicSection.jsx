@@ -12,19 +12,21 @@ export default function ClinicSection() {
   return (
     <section
       id={clinicSectionConfig.id}
-      className="w-full px-8 py-24 lg:p-28 xl:py-36 2xl:px-60 flex flex-col lg:flex-row items-center gap-12 justify-center"
+      className="w-full px-8 py-24 lg:p-28 xl:py-36 2xl:px-48 flex flex-col lg:flex-row items-center gap-12 justify-center"
     >
-      <div className="flex flex-col gap-8 max-w-64 xs:max-w-[26rem] md:max-w-md lg:max-w-sm xl:max-w-lg items-center lg:items-start">
+      <div className="flex flex-col gap-8 max-w-64 xs:max-w-[26rem] md:max-w-md lg:max-w-sm xl:max-w-xl ">
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold font-title uppercase text-sky-400">
-            {clinicSectionConfig.title}
+          <h2 className="text-2xl xs:text-3xl md:text-4xl xl:text-[2.5rem] font-bold font-title uppercase text-sky-400">
+            {clinicSectionConfig.title_introduction}
+            <br />
+            {clinicSectionConfig.title_name}
           </h2>
           <Link
             href={clinicSectionConfig.subtitle_link}
             target="_blank"
             className="hover:underline hover:text-sky-200"
           >
-            <h3 className="flex gap-1">
+            <h3 className={`${textSize} flex gap-1`}>
               <MapPinIcon className="h-5 w-5" />
               {clinicSectionConfig.subtitle}
             </h3>
@@ -49,7 +51,7 @@ export default function ClinicSection() {
           {clinicSectionConfig.button}
         </Button>
       </div>
-      <div className="max-w-64 xs:max-w-[26rem] lg:max-w-lg xl:max-w-md  items-center lg:items-start">
+      <div className="max-w-64 xs:max-w-[26rem] lg:max-w-lg xl:max-w-sm items-center lg:items-start">
         <Image
           src={clinicSectionConfig.img}
           alt={clinicSectionConfig.alt}

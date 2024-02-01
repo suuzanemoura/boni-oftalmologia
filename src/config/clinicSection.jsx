@@ -2,7 +2,8 @@ import Clinica from "@/public/images/image_clinicadrpedroboni.jpg";
 
 export const clinicSectionConfig = {
   id: "clinica",
-  title: "Conheça a Clínica Dr. Pedro Boni",
+  title_introduction: "Conheça a Clínica",
+  title_name: "Dr. Pedro Boni",
   subtitle: "Campo Grande, Rio de Janeiro",
   subtitle_link: "https://maps.app.goo.gl/urKgbzaHYhnD8xUy8",
   description: [
