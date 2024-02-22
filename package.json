@@ -13,6 +13,7 @@
     "@heroicons/react": "^2.0.18",
     "@lifarl/react-scroll-snap-slider": "^2.0.5",
     "animate.css": "^4.1.1",
+    "framer-motion": "^11.0.5",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"
