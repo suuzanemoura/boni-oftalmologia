@@ -25,7 +25,7 @@ export default function HeroSection() {
       <div className="pt-6 lg:pt-24 px-8 xs:px-12 sm:px-24 md:py-28 md:px-32 xl:px-48 2xl:px-60 w-full flex items-center justify-center">
         <div className="w-full max-w-[1056px] grid items-center lg:grid-cols-2 md:gap-12 gap-8 sm:gap-10 justify-center">
           <div className="w-full flex flex-col">
-            <h1 className="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold tracking-tight">
               {heroSectionConfig.title}
               <br className="hidden lg:block" />
               <span className="text-sky-400">
@@ -59,7 +59,7 @@ export default function HeroSection() {
         </div>
       </div>
       <div
-        className="absolute inset-x-0 top-[calc(100%-40rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-50rem)] 3xl:top-[calc(100%-65rem)]"
+        className="absolute inset-x-0 top-[calc(100%-40rem)] -z-10 transform-gpu overflow-hidden blur-3xl 2xs:top-[calc(100%-65rem)] sm:top-[calc(100%-60rem)] md:top-[calc(100%-70rem)] lg:top-[calc(100%-90rem)] 3xl:top-[calc(100%-80rem)]"
         aria-hidden="true"
       >
         <div
