@@ -7,12 +7,14 @@ import YoutubeSection from "../components/YoutubeSection/YoutubeSection";
 import { apiConfig } from "../config";
 import ClinicSection from "../components/ClinicSection/ClinicSection";
 import TestimonialSection from "../components/TestimonialSection/TestimonialSection";
+import ScrollToTopButton from "../components/Button/ScrollToTopButton";
 
 export default function Home() {
   return (
     <>
       <Header />
       <main>
+        <ScrollToTopButton />
         <HeroSection />
         <ServicesSection />
         <BioSection />
