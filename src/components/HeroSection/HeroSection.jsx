@@ -22,36 +22,40 @@ export default function HeroSection() {
           }}
         />
       </div>
-      <div className="pt-6 lg:pt-24 grid items-center lg:grid-cols-2 px-8 lg:px-32 xl:px-48 3xl:px-60 4xl:px-72 md:gap-12 gap-8 sm:gap-10 w-full">
-        <div className="w-full flex flex-col px-6 xs:px-16 md:px-24 lg:px-0 3xl:max-w-2xl">
-          <h1 className="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-bold tracking-tight">
-            {heroSectionConfig.title}
-            <br className="hidden lg:block" />
-            <span className="text-sky-400">{heroSectionConfig.highlight}</span>
-          </h1>
-          <p className={`${textSize} my-4 leading-6`}>
-            {heroSectionConfig.description}
-          </p>
+      <div className="pt-6 lg:pt-24 px-8 xs:px-12 sm:px-24 md:py-28 md:px-32 xl:px-48 2xl:px-60 w-full flex items-center justify-center">
+        <div className="w-full max-w-[1056px] grid items-center lg:grid-cols-2 md:gap-12 gap-8 sm:gap-10 justify-center">
+          <div className="w-full flex flex-col">
+            <h1 className="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-bold tracking-tight">
+              {heroSectionConfig.title}
+              <br className="hidden lg:block" />
+              <span className="text-sky-400">
+                {heroSectionConfig.highlight}
+              </span>
+            </h1>
+            <p className={`${textSize} my-4 leading-6`}>
+              {heroSectionConfig.description}
+            </p>
 
-          <button
-            className="bg-sky-700 hover:bg-sky-600 px-8 py-4 rounded-full mt-2 shadow-lg active:bg-sky-500 cursor-pointer w-fit"
-            type="button"
-          >
-            <Link
-              href={heroSectionConfig.Button_idHash_link}
-              className="transition duration-700 ease-in-out"
+            <button
+              className="bg-sky-700 hover:bg-sky-600 px-8 py-4 rounded-full mt-2 shadow-lg active:bg-sky-500 cursor-pointer w-fit"
+              type="button"
             >
-              <p
-                className={`${textSize} flex gap-2 items-center justify-center font-semibold`}
+              <Link
+                href={heroSectionConfig.Button_idHash_link}
+                className="transition duration-700 ease-in-out"
               >
-                {heroSectionConfig.button}
-                <ArrowDownCircleIcon className="h-5 w-5" />
-              </p>
-            </Link>
-          </button>
-        </div>
-        <div className="px-3 md:mb-0 xs:px-10 md:px-20 lg:px-0">
-          <VideoPresentation url={heroSectionConfig.video_url} />
+                <p
+                  className={`${textSize} flex gap-2 items-center justify-center font-semibold`}
+                >
+                  {heroSectionConfig.button}
+                  <ArrowDownCircleIcon className="h-5 w-5" />
+                </p>
+              </Link>
+            </button>
+          </div>
+          <div className="w-full">
+            <VideoPresentation url={heroSectionConfig.video_url} />
+          </div>
         </div>
       </div>
       <div
@@ -66,7 +70,7 @@ export default function HeroSection() {
           }}
         />
       </div>
-      <div className="w-full overflow-hidden leading-[0] -z-[100] mt-[-11rem] 2xs:mt-[-15rem] lg:mt-[-5rem]">
+      <div className="w-full overflow-hidden leading-[0] -z-[100] mt-[-11rem] md:mt-[-20rem] lg:mt-[-13rem]">
         <svg
           dataname="Wavy"
           xmlns="http://www.w3.org/2000/svg"

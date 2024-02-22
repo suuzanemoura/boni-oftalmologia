@@ -8,7 +8,7 @@ import { navBarConfig } from "@/src/config";
 export default function Navbar() {
   return (
     <nav
-      className="hidden lg:flex items-start lg:items-center justify-between p-8 lg:py-10 md:px-14 lg:px-16 xl:px-20"
+      className="hidden lg:flex items-start lg:items-center justify-between p-8 lg:py-10 md:px-14 lg:px-16 xl:px-20 2xl:px-32"
       aria-label="Global"
     >
       <div className="flex lg:flex-1">

@@ -4,11 +4,11 @@ import { footerConfig } from "@/src/config";
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
-      <div className="mx-auto w-full max-w-screen-xl p-8 pb-0 lg:py-8">
+    <footer className="bg-white p-8 lg:py-10 xs:px-12 sm:px-24 md:px-32 xl:px-48 2xl:px-60">
+      <div className="mx-auto w-full max-w-[1056px]">
         <div className="lg:flex lg:justify-between">
-          <div className="mb-6 lg:mb-0 pt-4 pr-4 lg:pr-10 min-w-fit flex flex-col items-center lg:items-start">
-            <div className="flex justify-center lg:block">
+          <div className="mb-6 lg:mb-0 pt-4 pr-4 lg:pr-10 min-w-fit flex flex-col">
+            <div className="flex justify-center">
               <Link
                 href={footerConfig.link}
                 className="flex items-center gap-3"
@@ -24,7 +24,7 @@ export default function Footer() {
               </Link>
             </div>
 
-            <div className="flex mt-2 lg:ml-11 gap-2">
+            <div className="flex justify-center mt-2 lg:justify-start lg:ml-11 gap-2">
               {footerConfig.socialmedia_links.map((link, index) => {
                 return (
                   <Link
@@ -41,7 +41,7 @@ export default function Footer() {
             </div>
           </div>
           <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8 lg:hidden" />
-          <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:justify-items-center gap-4">
             <div>
               <Link
                 href={footerConfig.doctoralia_url}

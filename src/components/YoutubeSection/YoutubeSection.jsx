@@ -26,7 +26,7 @@ export default function YoutubeSection({ apiConfig }) {
   }, [channelApiInfo, loaded]);
 
   return (
-    <section className="px-8 xs:px-16 md:px-32 xl:px-40 2xl:px-60 3xl:px-96 4xl:px-[22rem] py-32 bg-slate-300/85">
+    <section className="flex flex-col items-center px-8 py-24 xs:px-12 sm:px-24 md:py-28 md:px-32 xl:px-48 2xl:px-60 bg-slate-300/85">
       {error ? (
         <AlertError title={youtubeSectionConfig.alert_error_api.title}>
           <ul className="mt-1.5 list-disc list-inside">
@@ -50,7 +50,7 @@ export default function YoutubeSection({ apiConfig }) {
           </ul>
         </AlertError>
       ) : loaded && Number(channelInfo?.items[0].statistics.videoCount) > 0 ? (
-        <div className="flex flex-col gap-8 justify-center items-center">
+        <div className="flex flex-col gap-8 justify-center items-center w-full h-full object-contain max-w-[1056px]">
           <h3 className="text-xl text-sky-700 font-medium self-start uppercase flex items-center gap-2">
             <span className="w-24 h-0.5 bg-sky-700 inline-block"></span>{" "}
             {youtubeSectionConfig.subtitle}
@@ -102,7 +102,7 @@ export default function YoutubeSection({ apiConfig }) {
               data-count="default"
             ></div>
           </div>
-          <div className="relative overflow-hidden max-w-[240px] 2xs:max-w-[320px] xs:max-w-[367px] md:max-w-[740px] xl:max-w-[1110px] 4xl:max-w-[1865px]">
+          <div className="relative overflow-hidden object-contain w-full h-full">
             <YoutubePlaylist
               id={
                 channelApiInfo?.items[0].contentDetails.relatedPlaylists.uploads
