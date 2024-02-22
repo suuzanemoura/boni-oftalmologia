@@ -7,7 +7,7 @@ import { navBarConfig } from "@/src/config";
 export default function NavbarMobile({ setMobileMenuOpen }) {
   return (
     <nav
-      className="flex lg:hidden items-start lg:items-center justify-between p-8 lg:py-10 md:px-14 lg:px-16 xl:px-20"
+      className="flex lg:hidden items-start lg:items-center justify-between p-8 lg:py-10 xs:px-12 sm:px-24 md:px-32"
       aria-label="Global"
     >
       <div className="flex lg:flex-1">

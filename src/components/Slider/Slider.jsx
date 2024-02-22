@@ -48,10 +48,10 @@ export default function Slider() {
   }, []);
 
   return (
-    <div className="max-w-max mx-auto text-center flex flex-col lg:flex-row items-center gap-12 lg:px-8 xl:px-36 py-8">
-      <div className="transition-all duration-150 delay-300 ease-in-out lg:min-w-max">
+    <div className="flex flex-col lg:flex-row w-full gap-12 py-8 lg:items-center">
+      <div className="transition-all duration-150 delay-300 ease-in-out w-full h-auto">
         <div
-          className="relative flex flex-col"
+          className="relative flex flex-col w-full h-auto"
           ref={itemsRef}
         >
           {items.map((item, index) => (
@@ -65,12 +65,13 @@ export default function Slider() {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
               beforeEnter={() => heightFix()}
+              className={"object-cover w-full h-full"}
             >
               <Image
-                className="rounded-xl"
+                className="rounded-xl object-cover w-full h-full"
                 src={item.img}
-                width={375}
-                height={500}
+                width={397}
+                height={530}
                 alt={item.alt}
                 loading="lazy"
               />
@@ -79,7 +80,7 @@ export default function Slider() {
         </div>
       </div>
 
-      <div className="max-w-xs sm:max-w-sm md:max-w-xl mx-auto flex flex-col lg:gap-3">
+      <div className="mr-auto flex flex-col lg:gap-3 w-full">
         {items.map((item, index) => (
           <button
             key={index}
@@ -120,7 +121,7 @@ export default function Slider() {
                   : "hidden lg:block lg:opacity-50 lg:group-hover:opacity-100 lg:group-focus:opacity-100 lg:transition-opacity"
               }`}
             >
-              <span className="block text-left font-medium text-slate-900 mb-2">
+              <span className="block text-left font-medium text-slate-900">
                 <h3
                   className={`text-xl font-bold text-boni-blue-200 ${
                     active === index ? "text-2xl" : ""
@@ -131,7 +132,7 @@ export default function Slider() {
                 <p className={`${textSize}`}>{item.description}</p>
               </span>
               <span
-                className="block relative w-full bg-slate-200 h-0.5 rounded-full mt-5"
+                className="block relative w-full bg-slate-200 h-0.5 rounded-full mt-7"
                 role="progressbar"
                 aria-valuenow={active === index ? progress : 0}
               >
