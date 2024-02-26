@@ -1,10 +1,10 @@
 "use client";
 import { useRequestData } from "@/src/hooks/useRequestData";
-import YoutubeVideoCard from "../YoutubeVideoCard/YoutubeVideoCard";
+import YoutubeVideoCard from "../YoutubeVideoCard";
 import { useEffect, useState } from "react";
-import AlertError from "../../AlertError/AlertError";
-import LoadingCircle from "../../LoadingCircle/LoadingCircle";
-import Carousel from "../../Carousel/Carousel";
+import AlertError from "../../AlertError";
+import LoadingCircle from "../../LoadingCircle";
+import Carousel from "../../Carousel";
 
 export default function YoutubePlaylist({ id, url }) {
   const [playlistItemsInfo, setplaylistItemsInfo] = useState(null);

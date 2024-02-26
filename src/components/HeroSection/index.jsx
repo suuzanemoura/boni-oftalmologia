@@ -1,6 +1,6 @@
 "use client";
 import { ArrowDownCircleIcon } from "@heroicons/react/20/solid";
-import VideoPresentation from "../VideoPresentation/VideoPresentation";
+import VideoPresentation from "../VideoPresentation";
 import { useFontContext } from "@/src/contexts/FontContext";
 import Link from "next/link";
 import { heroSectionConfig } from "@/src/config";

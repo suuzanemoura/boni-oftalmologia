@@ -1,10 +1,10 @@
 "use client";
 import { useRequestData } from "@/src/hooks/useRequestData";
 import { useEffect, useState } from "react";
-import Carousel from "../Carousel/Carousel";
-import AlertError from "../AlertError/AlertError";
-import LoadingCircle from "../LoadingCircle/LoadingCircle";
-import PostCard from "./PostCard/PostCard";
+import Carousel from "../Carousel";
+import AlertError from "../AlertError";
+import LoadingCircle from "../LoadingCircle";
+import PostCard from "./PostCard";
 import Link from "next/link";
 
 export default function InstagramSection({ instagramSectionConfig }) {
@@ -19,8 +19,6 @@ export default function InstagramSection({ instagramSectionConfig }) {
       setFeedList(instagramApiInfo.data?.slice(0, 5));
     }
   }, [instagramApiInfo, loaded]);
-
-  console.log(instagramApiInfo, loaded, error);
 
   return (
     <section className="flex flex-col justify-center items-center px-8 py-24 xs:px-12 sm:px-24 md:py-28 md:px-32 xl:px-48 2xl:px-60 bg-slate-300/85">

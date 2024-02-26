@@ -1,5 +1,5 @@
 import { Slider } from "@lifarl/react-scroll-snap-slider";
-import NavArrow from "./NavArrow/NavArrow";
+import NavArrow from "./NavArrow";
 
 export default function Carousel({ children, width }) {
   const renderCustomArrow = ({ direction, ref, onClick }) => (

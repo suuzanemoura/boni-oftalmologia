@@ -2,7 +2,7 @@ import { CursorArrowRippleIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
 import PopoverNavBar from "../Popover/PopoverNavBar";
-import Button from "../Button/Button";
+import Button from "../Button";
 import { navBarConfig } from "@/src/config";
 
 export default function Navbar() {

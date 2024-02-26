@@ -1,6 +1,6 @@
 import { Popover } from "@headlessui/react";
 import Link from "next/link";
-import PopoverFontSize from "./PopoverFontSize";
+import PopoverFontSize from "../PopoverFontSize";
 import { navBarConfig } from "@/src/config";
 
 export default function PopoverNavBar() {
