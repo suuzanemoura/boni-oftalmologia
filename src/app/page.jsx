@@ -8,6 +8,8 @@ import { apiConfig } from "../config";
 import ClinicSection from "../components/ClinicSection/ClinicSection";
 import TestimonialSection from "../components/TestimonialSection/TestimonialSection";
 import ScrollToTopButton from "../components/Button/ScrollToTopButton";
+import InstagramSection from "../components/InstagramSection";
+import { instagramSectionConfig } from "../config/instagramSection";
 
 export default function Home() {
   return (
@@ -21,6 +23,7 @@ export default function Home() {
         <YoutubeSection apiConfig={apiConfig} />
         <ClinicSection />
         <TestimonialSection />
+        <InstagramSection instagramSectionConfig={instagramSectionConfig} />
       </main>
       <Footer />
     </>
