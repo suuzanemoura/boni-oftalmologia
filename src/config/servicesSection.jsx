@@ -12,7 +12,7 @@ import Service05 from "@/public/images/image_plastica_ocular.png";
 export const servicesSectionConfig = {
   id: "serviços",
   title:
-    "Meu propósito é fazer com que o paciente tenha uma experiencia única e sinta-se acolhido e confiante no tratamento oftalmológico!",
+    "Meu propósito é fazer com que o paciente tenha uma experiencia única e se sinta acolhido e confiante no tratamento oftalmológico!",
   slider_items: [
     {
       img: SliderImg01,

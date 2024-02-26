@@ -17,6 +17,7 @@ export const useRequestData = (path) => {
       setData(response);
       setIsLoading(false);
       setLoaded(true);
+      response.error ? setError(true) : null;
     } catch (error) {
       setError(true);
     }
