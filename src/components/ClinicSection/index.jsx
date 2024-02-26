@@ -4,7 +4,7 @@ import { clinicSectionConfig } from "@/src/config/clinicSection";
 import { MapPinIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../Button/Button";
+import Button from "../Button";
 import { useFontContext } from "@/src/contexts/FontContext";
 
 export default function ClinicSection() {

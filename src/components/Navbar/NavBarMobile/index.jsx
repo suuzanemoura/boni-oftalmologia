@@ -1,7 +1,7 @@
 import { Bars3Icon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
-import PopoverFontSize from "../Popover/PopoverFontSize";
+import PopoverFontSize from "../../Popover/PopoverFontSize";
 import { navBarConfig } from "@/src/config";
 
 export default function NavbarMobile({ setMobileMenuOpen }) {

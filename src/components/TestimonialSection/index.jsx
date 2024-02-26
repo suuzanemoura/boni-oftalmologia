@@ -1,8 +1,8 @@
 "use client";
 import { Slider } from "@lifarl/react-scroll-snap-slider";
 import { useRef, useState } from "react";
-import NavArrow from "../Carousel/NavArrow/NavArrow";
-import VideoPresentation from "../VideoPresentation/VideoPresentation";
+import NavArrow from "../Carousel/NavArrow";
+import VideoPresentation from "../VideoPresentation";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { testimonialSectionConfig } from "@/src/config/testimonialSection";
 import { useFontContext } from "@/src/contexts/FontContext";

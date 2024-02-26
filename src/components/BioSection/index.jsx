@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useFontContext } from "@/src/contexts/FontContext";
-import Button from "../Button/Button";
+import Button from "../Button";
 import { bioSectionConfig } from "@/src/config";
 
 export default function BioSection() {

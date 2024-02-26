@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import DisclosureNavBar from "../Disclousure/DisclousureNavbar";
+import DisclosureNavBar from "../Disclousure";
 import { Dialog, Transition } from "@headlessui/react";
 
 import { XMarkIcon } from "@heroicons/react/24/outline";

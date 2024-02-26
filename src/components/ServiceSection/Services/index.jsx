@@ -1,6 +1,6 @@
 import { servicesConfig } from "@/src/config";
-import Carousel from "../../Carousel/Carousel";
-import ServiceCard from "./ServiceCard";
+import Carousel from "../../Carousel";
+import ServiceCard from "../ServicesCard";
 
 export default function Services() {
   return (

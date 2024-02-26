@@ -1,8 +1,8 @@
 "use client";
 
 import { servicesSectionConfig } from "@/src/config";
-import Slider from "../Slider/Slider";
-import Services from "./Services/Services";
+import Slider from "../Slider";
+import Services from "./Services";
 
 export default function ServicesSection() {
   return (
