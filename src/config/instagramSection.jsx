@@ -4,7 +4,7 @@ export const instagramSectionConfig = {
   subtitle: "Instagram",
   instagram_url: "https://www.instagram.com/drpedroboni/",
   token: process.env.INSTAGRAM_TEST_TOKEN,
-  url_instagram_api: `${process.env.NEXT_PUBLIC_INSTAGRAM_API}?fields=id,media_type,media_url,caption,permalink,username&access_token=${process.env.INSTAGRAM_TEST_TOKEN}`,
+  url_instagram_api: `${process.env.NEXT_PUBLIC_INSTAGRAM_API}${process.env.INSTAGRAM_USER_ID}/media?fields=id,media_type,media_url,thumbnail_url,caption,permalink,username&access_token=${process.env.INSTAGRAM_TOKEN}`,
   alert_error_api: {
     title:
       "Atenção! Informações do feed do Instagram do Dr. Pedro Boni não foram foram carregados:",
